@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SwitchCamera : MonoBehaviour
 {
-    public GameObject Camera_Main;
-    public GameObject Camera_TopDown;
+    public GameObject isometricCamera;
+    public GameObject topDownCamera;
     public int Manager;
 
     public void ChangeCamera()
@@ -28,12 +28,17 @@ public class SwitchCamera : MonoBehaviour
 
     void Cam_Main()
     {
-        Camera_Main.SetActive(true);
-        Camera_TopDown.SetActive(false);
+        isometricCamera.SetActive(true);
+        topDownCamera.SetActive(false);
+        isometricCamera.GetComponent<AudioListener>().enabled = true;
+        topDownCamera.GetComponent<AudioListener>().enabled = false;
     }
     void Cam_TopDown()
     {
-        Camera_Main.SetActive(false);
-        Camera_TopDown.SetActive(true);
+        isometricCamera.SetActive(false);
+        topDownCamera.SetActive(true);
+        isometricCamera.GetComponent<AudioListener>().enabled = false;
+        topDownCamera.GetComponent<AudioListener>().enabled = true;
     }
 }
+ 
