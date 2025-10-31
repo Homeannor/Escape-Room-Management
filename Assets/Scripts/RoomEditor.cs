@@ -15,4 +15,42 @@ public class RoomEditor : MonoBehaviour
         Debug.Log("Button Pressed");
     }
 
+    public void WoodenWallButton()
+    {
+        Debug.Log("Wooden Wall");
+    }
+    public void WoodenDoorButton()
+    {
+        Debug.Log("Wooden Door");
+    }
+    public void WoodenKeyButton()
+    {
+        Debug.Log("Wooden Key");
+    }
+    public void HorrorWallButton()
+    {
+        Debug.Log("Horror Wall");
+    }
+    public void HorrorDoorButton()
+    {
+        Debug.Log("Horror Door");
+    }
+
+    public void HorrorKeyButton()
+    {
+        Debug.Log("Horror Key");
+    }
+    public void TempleWallButton()
+    {
+        Debug.Log("Temple Wall");
+    }
+    public void TempleDoorButton()
+    {
+        Debug.Log("Temple Door");
+    }
+    public void TempleKeyButton()
+    {
+        Debug.Log("Temple Key");
+    }
+
 }
