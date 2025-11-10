@@ -4,6 +4,8 @@ public class RoomEditor : MonoBehaviour
 {
     [SerializeField] private CanvasGroup Panel;
 
+    // Commit comment
+
     public void OpenClosePanel()
     {
         Panel.alpha = Panel.alpha > 0 ? 0 : 1;
