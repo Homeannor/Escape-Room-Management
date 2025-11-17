@@ -1,8 +1,17 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomEditor : MonoBehaviour
 {
     [SerializeField] private CanvasGroup Panel;
+
+    Buildmanager Bm;
+
+    private void Start()
+    {
+        Bm = Buildmanager.instance;
+
+    }
 
     public void OpenClosePanel()
     {
@@ -13,7 +22,9 @@ public class RoomEditor : MonoBehaviour
     public void TestButtons()
     {
         Debug.Log("Button Pressed");
+        Bm.SetBuildingTobuild(Bm.Wooden_wall);
+        OpenClosePanel();
     }
 
 }
- 
+
