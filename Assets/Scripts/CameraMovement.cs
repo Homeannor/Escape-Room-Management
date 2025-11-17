@@ -30,37 +30,49 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            topDownCamera.transform.Translate(movement, 0, 0, Space.World);
-            isometricCamera.transform.Translate(movement, 0, 0, Space.World);
+            transform.Translate(movement, 0, 0, Space.Self);
+
+            /*topDownCamera.transform.Translate(movement, 0, 0, Space.World);
+            isometricCamera.transform.Translate(movement, 0, 0, Space.World);*/
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            topDownCamera.transform.Translate(-movement, 0, 0, Space.World);
-            isometricCamera.transform.Translate(-movement, 0, 0, Space.World);
+            transform.Translate(-movement, 0, 0, Space.Self);
+
+            /*topDownCamera.transform.Translate(-movement, 0, 0, Space.Self);
+            isometricCamera.transform.Translate(-movement, 0, 0, Space.Self);*/
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            topDownCamera.transform.Translate(0, 0, movement, Space.World);
-            isometricCamera.transform.Translate(0, 0, movement, Space.World);
+            transform.Translate(0, 0, movement, Space.Self);
+
+            /*topDownCamera.transform.Translate(0, 0, movement, Space.Self);
+            isometricCamera.transform.Translate(0, 0, movement, Space.Self);*/
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            topDownCamera.transform.Translate(0, 0, -movement, Space.World);
-            isometricCamera.transform.Translate(0, 0, -movement, Space.World);
+            transform.Translate(0, 0, -movement, Space.Self);
+
+            /*topDownCamera.transform.Translate(0, 0, -movement, Space.Self);
+            isometricCamera.transform.Translate(0, 0, -movement, Space.Self);*/
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            topDownCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
-            isometricCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
+            transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.Self);
+
+            /*topDownCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
+            isometricCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);*/
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            topDownCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
-            isometricCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
+            transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.Self);
+
+            /*topDownCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
+            isometricCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);*/
         }
     }
 }
