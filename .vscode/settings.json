@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Escape Room.sln"
+    "dotnet.defaultSolution": "Escape.sln"
 }
