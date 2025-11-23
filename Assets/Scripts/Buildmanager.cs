@@ -4,9 +4,7 @@ public class Buildmanager : MonoBehaviour
 {
     public GameObject BuildingToBuild;
     public static Buildmanager instance;
-    // when adding new assest make a public varible here before starting
-    public GameObject Wooden_wall;
-
+    
     private void Awake()
     {
         if (instance != null)
@@ -14,6 +12,7 @@ public class Buildmanager : MonoBehaviour
             Debug.LogError("more than one build maganer in scene");
             return;
         }
+
         instance = this;
     }
 
@@ -21,6 +20,7 @@ public class Buildmanager : MonoBehaviour
     {
         BuildingToBuild = Building;
     }
+
     public GameObject GetBuildingToBuild()
     {
         return BuildingToBuild;

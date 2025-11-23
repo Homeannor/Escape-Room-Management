@@ -12,12 +12,15 @@ public class tiles : MonoBehaviour
 
     private Renderer rend;
 
+    private GameObject itemPrefabs;
+
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startColour = rend.material.color;
         BM = Buildmanager.instance;
+        itemPrefabs = GameObject.Find("== ITEM PREFABS ==");
     }
 
     private void OnMouseDown()
@@ -34,7 +37,8 @@ public class tiles : MonoBehaviour
         }
 
         GameObject BuildingToBuild = BM.GetBuildingToBuild();
-        Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation);
+        Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation, itemPrefabs.transform);
+        Build.SetActive(true);
         BM.SetBuildingTobuild(null);
 
 
