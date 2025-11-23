@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColour: {r: 0, g: 1, b: 0.12487769, a: 0}
-  positionOffSet: {x: -3.05, y: 2, z: -1}
+  positionOffSet: {x: -3.05, y: 2, z: 1}
   Build: {fileID: 0}
