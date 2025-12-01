@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class UI : MonoBehaviour
+public class RoomEditor : MonoBehaviour
 {
     [SerializeField] private GameObject PanelCanvas;
     public GameObject directionalLight;
@@ -64,5 +64,13 @@ public class UI : MonoBehaviour
             timeButtonText.text = "DAYTIME";
         }
     }
+
+    /*public void RoomEditorButton()
+    {
+        Debug.Log("Item Selected: " + itemPrefab.name);
+        Bm.SetBuildingTobuild(itemPrefab);
+        OpenClosePanel();
+    }*/
+
 }
 
