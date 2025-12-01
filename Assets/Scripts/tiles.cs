@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class tiles : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class tiles : MonoBehaviour
     public Vector3 positionOffSet;
 
     public GameObject Build;
+    public GameObject previewImage;
 
     Buildmanager BM;
 
@@ -21,10 +24,25 @@ public class tiles : MonoBehaviour
         startColour = rend.material.color;
         BM = Buildmanager.instance;
         itemPrefabs = GameObject.Find("== ITEM PREFABS ==");
+        previewImage = GameObject.FindWithTag("PreviewImage");
+    }
+
+    void Update()
+    {
+        if (Build != null && Input.GetKeyDown(KeyCode.P))
+        {
+            previewImage.SetActive(false);
+            BM.SetBuildingTobuild(null);            
+        }
     }
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        
         if (BM.GetBuildingToBuild() == null)
         {
             return;
@@ -39,9 +57,6 @@ public class tiles : MonoBehaviour
         GameObject BuildingToBuild = BM.GetBuildingToBuild();
         Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation, itemPrefabs.transform);
         Build.SetActive(true);
-        BM.SetBuildingTobuild(null);
-
-
     }
 
     private void OnMouseEnter()

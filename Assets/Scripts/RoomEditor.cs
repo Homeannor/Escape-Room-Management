@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RoomEditor : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup Panel;
+    [SerializeField] private GameObject PanelCanvas;
     public GameObject directionalLight;
 
     private string timeOfDay = "Day";
@@ -14,8 +14,23 @@ public class RoomEditor : MonoBehaviour
 
     public void OpenClosePanel()
     {
-        Panel.alpha = Panel.alpha > 0 ? 0 : 1;
-        Panel.interactable = Panel.interactable == true ? false : true; //this makes the panel only be interactable when it's visible so the buttons don't get clicked when the panel is closed
+        if (PanelCanvas.activeSelf)
+        {
+            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            PanelCanvas.SetActive(false);
+            Debug.Log("PanelCanvas set to false");
+        }
+        else
+        {
+            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            PanelCanvas.SetActive(true);
+            Debug.Log("PanelCanvas set to true");
+        }
+
+        //PanelCanvas.SetActive(true ? false : true);
+        //Debug.Log("Changing the PanelCanvas Visibility");
+        //Panel.alpha = Panel.alpha > 0 ? 0 : 1;
+        //PanelCanvas.GetComponent<CanvasGroup>().interactable = PanelCanvas.GetComponent<CanvasGroup>().interactable == true ? false : true; //this makes the panel only be interactable when it's visible so the buttons don't get clicked when the panel is closed
     }
 
     void Start()
