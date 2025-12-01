@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class tiles : MonoBehaviour
 {
+    public static tiles instance;
     public Color hoverColour;
     private Color startColour;
     public Vector3 positionOffSet;
 
     public GameObject Build;
     public GameObject previewImage;
+    public GameObject cancelButton;
 
     Buildmanager BM;
 
@@ -20,19 +23,27 @@ public class tiles : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         rend = GetComponent<Renderer>();
         startColour = rend.material.color;
         BM = Buildmanager.instance;
         itemPrefabs = GameObject.Find("== ITEM PREFABS ==");
+
         previewImage = GameObject.FindWithTag("PreviewImage");
+        cancelButton = GameObject.FindWithTag("CancelButton");
     }
 
     void Update()
     {
-        if (Build != null && Input.GetKeyDown(KeyCode.P))
+        if (BM.GetBuildingToBuild() != null)
         {
-            previewImage.SetActive(false);
-            BM.SetBuildingTobuild(null);            
+            //previewImage.SetActive(true);      
+            cancelButton.SetActive(true);         
+        }
+        else
+        {
+            //previewImage.SetActive(false);      
+            cancelButton.SetActive(false);
         }
     }
 

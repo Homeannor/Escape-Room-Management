@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PreviewImage
+  - CancelButton
   layers:
   - Default
   - TransparentFX

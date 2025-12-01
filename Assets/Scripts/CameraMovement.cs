@@ -28,6 +28,15 @@ public class CameraMovement : MonoBehaviour
 
         float movement = moveSpeed * Time.deltaTime;
 
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            moveSpeed = 20f;
+        }
+        else
+        {
+            moveSpeed = 10f;
+        }
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(movement, 0, 0, Space.Self);

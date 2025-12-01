@@ -17,6 +17,7 @@ public class EditorButton : MonoBehaviour
 
         previewImage = GameObject.FindWithTag("PreviewImage");
         //previewImage.SetActive(false);
+        //previewImage.gameObject.SetActive(false);
 
         Debug.Log("Current Item: " + itemPrefabs.transform.Find(gameObject.name));
     }

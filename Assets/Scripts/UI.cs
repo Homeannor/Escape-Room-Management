@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class RoomEditor : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class RoomEditor : MonoBehaviour
     private string timeOfDay = "Day";
     public GameObject timeButton;
     public TextMeshProUGUI timeButtonText;
+
+    //tiles tileInstance;
 
     public void OpenClosePanel()
     {
@@ -38,6 +41,8 @@ public class RoomEditor : MonoBehaviour
         directionalLight.transform.rotation = Quaternion.Euler(130f, -10f, 0f);
         timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
         timeButtonText.text = "DAYTIME";
+
+        //tileInstance = tiles.instance;
     }
 
     public void timeToggle()
@@ -63,6 +68,11 @@ public class RoomEditor : MonoBehaviour
             timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
             timeButtonText.text = "DAYTIME";
         }
+    }
+
+    public void cancelButton()
+    {
+        Buildmanager.instance.SetBuildingTobuild(null);   
     }
 
     /*public void RoomEditorButton()
