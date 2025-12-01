@@ -13,6 +13,7 @@ public class tiles : MonoBehaviour
     public GameObject Build;
     public GameObject previewImage;
     public GameObject cancelButton;
+    public GameObject rotateButton;
 
     Buildmanager BM;
 
@@ -31,6 +32,7 @@ public class tiles : MonoBehaviour
 
         previewImage = GameObject.FindWithTag("PreviewImage");
         cancelButton = GameObject.FindWithTag("CancelButton");
+        rotateButton = GameObject.FindWithTag("RotateButton");
     }
 
     void Update()
@@ -38,12 +40,14 @@ public class tiles : MonoBehaviour
         if (BM.GetBuildingToBuild() != null)
         {
             //previewImage.SetActive(true);      
-            cancelButton.SetActive(true);         
+            cancelButton.SetActive(true);      
+            rotateButton.SetActive(true);         
         }
         else
         {
             //previewImage.SetActive(false);      
             cancelButton.SetActive(false);
+            rotateButton.SetActive(false);      
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PreviewImage
   - CancelButton
+  - RotateButton
   layers:
   - Default
   - TransparentFX

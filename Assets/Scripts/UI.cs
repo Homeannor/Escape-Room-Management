@@ -72,7 +72,13 @@ public class RoomEditor : MonoBehaviour
 
     public void cancelButton()
     {
+        tiles.instance.previewImage.SetActive(false);
         Buildmanager.instance.SetBuildingTobuild(null);   
+    }
+
+    public void rotateButton()
+    {
+        // Go crazy noah XD
     }
 
     /*public void RoomEditorButton()
