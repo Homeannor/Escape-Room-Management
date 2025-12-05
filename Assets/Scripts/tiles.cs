@@ -9,6 +9,12 @@ public class tiles : MonoBehaviour
     public Color hoverColour;
     private Color startColour;
     public Vector3 positionOffSet;
+    public Quaternion rotaion1;
+    public Quaternion rotaion2;
+    public Quaternion rotaion3;
+    public Quaternion rotaion4;
+
+
 
     public GameObject Build;
     public GameObject previewImage;
@@ -49,6 +55,9 @@ public class tiles : MonoBehaviour
             cancelButton.SetActive(false);
             rotateButton.SetActive(false);      
         }
+
+        
+
     }
 
     private void OnMouseDown()
@@ -69,9 +78,7 @@ public class tiles : MonoBehaviour
             return;
         }
 
-        GameObject BuildingToBuild = BM.GetBuildingToBuild();
-        Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation, itemPrefabs.transform);
-        Build.SetActive(true);
+        placement();
     }
 
     private void OnMouseEnter()
@@ -84,12 +91,41 @@ public class tiles : MonoBehaviour
         rend.material.color = hoverColour;
     }
 
+    
+
     private void OnMouseExit()
     {
         rend.material.color = startColour;
     }
+   
+    private void placement()
+    {
+        if(BM.Angle == 0)
+        {
+            GameObject BuildingToBuild = BM.GetBuildingToBuild();
+            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion1, itemPrefabs.transform);
+            Build.SetActive(true);
+        }
+        else if (BM.Angle == 1)
+        {
+            GameObject BuildingToBuild = BM.GetBuildingToBuild();
+            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion2, itemPrefabs.transform);
+            Build.SetActive(true);
+        }
+        else if (BM.Angle == 2)
+        {
+            GameObject BuildingToBuild = BM.GetBuildingToBuild();
+            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion3, itemPrefabs.transform);
+            Build.SetActive(true);
+        }
+        else if (BM.Angle == 3)
+        {
+            GameObject BuildingToBuild = BM.GetBuildingToBuild();
+            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion4, itemPrefabs.transform);
+            Build.SetActive(true);
+        }
 
-
+    }
 
 
 }
