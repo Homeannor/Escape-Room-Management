@@ -65,6 +65,13 @@ public class tiles : MonoBehaviour
             rotateButton.SetActive(false);      
         }
 
+        if (Input.GetKeyUp(KeyCode.R) && Preview)
+        {
+            GameObject.Destroy(Previews);
+            Previews = null;
+            placement(true);
+        }
+
     }
 
     private void OnMouseDown()
@@ -87,7 +94,7 @@ public class tiles : MonoBehaviour
 
         placement(false);
     }
-
+  
     private void OnMouseEnter()
     {
         if (BM.GetBuildingToBuild() == null)
@@ -96,12 +103,14 @@ public class tiles : MonoBehaviour
         }
         else
         {
+            Preview = true;
             placement(true);
         }
-
-
+        
+        
         rend.material.color = hoverColour;
     }
+    
 
     
 
@@ -113,6 +122,7 @@ public class tiles : MonoBehaviour
         {
             GameObject.Destroy(Previews);
             Previews = null;
+            Preview = false;
         }
     }
    
