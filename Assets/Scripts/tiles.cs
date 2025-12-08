@@ -34,7 +34,7 @@ public class tiles : MonoBehaviour
 
     private GameObject itemPrefabs;
     private GameObject previewItemPrefabs;
-
+    public GameObject PlacementWall;
 
     private void Start()
     {
@@ -181,7 +181,7 @@ public class tiles : MonoBehaviour
             if(BM.Angle == 0)
             {
                 
-                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                GameObject BuildingToBuild = PlacementWall; 
                 Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion1, previewItemPrefabs.transform);
                 Previews.SetActive(true);
                
@@ -189,7 +189,7 @@ public class tiles : MonoBehaviour
             else if (BM.Angle == 1)
             {
                 
-                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                GameObject BuildingToBuild = PlacementWall;
                 Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion2, previewItemPrefabs.transform);
                 Previews.SetActive(true);
                 
@@ -197,15 +197,15 @@ public class tiles : MonoBehaviour
             else if (BM.Angle == 2)
             {
                 
-                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                GameObject BuildingToBuild = PlacementWall;
                 Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion3, previewItemPrefabs.transform);
                 Previews.SetActive(true);
                 
             }
             else if (BM.Angle == 3)
             {
-                
-                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+
+                GameObject BuildingToBuild = PlacementWall;
                 Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion4, previewItemPrefabs.transform);
                 Previews.SetActive(true);
                 
