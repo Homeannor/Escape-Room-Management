@@ -4,7 +4,9 @@ public class Buildmanager : MonoBehaviour
 {
     public GameObject BuildingToBuild;
     public static Buildmanager instance;
-    
+    public int Angle;
+
+
     private void Awake()
     {
         if (instance != null)
@@ -24,6 +26,16 @@ public class Buildmanager : MonoBehaviour
     public GameObject GetBuildingToBuild()
     {
         return BuildingToBuild;
+    }
+
+    public void Anglechanges()
+    {
+        Angle += 1;
+
+        if (Angle == 4)
+        {
+            Angle = 0;
+        }
     }
 }
 

@@ -12,6 +12,9 @@ public class RoomEditor : MonoBehaviour
     private string timeOfDay = "Day";
     public GameObject timeButton;
     public TextMeshProUGUI timeButtonText;
+    Buildmanager BM;
+
+
 
     //tiles tileInstance;
 
@@ -41,7 +44,7 @@ public class RoomEditor : MonoBehaviour
         directionalLight.transform.rotation = Quaternion.Euler(130f, -10f, 0f);
         timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
         timeButtonText.text = "DAYTIME";
-
+        BM = Buildmanager.instance;// link to build mager
         //tileInstance = tiles.instance;
     }
 
@@ -78,8 +81,10 @@ public class RoomEditor : MonoBehaviour
 
     public void rotateButton()
     {
-        // Go crazy noah XD
+        BM.Anglechanges();
     }
+
+  
 
     /*public void RoomEditorButton()
     {
