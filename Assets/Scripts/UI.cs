@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class RoomEditor : MonoBehaviour
 {
@@ -46,6 +47,24 @@ public class RoomEditor : MonoBehaviour
         timeButtonText.text = "DAYTIME";
         BM = Buildmanager.instance;// link to build mager
         //tileInstance = tiles.instance;
+    }
+
+    void Update()
+    {
+        if (BM.GetBuildingToBuild() != null && Input.GetKeyDown(KeyCode.Escape))
+        {
+            cancelButton();
+            return;
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        if (BM.GetBuildingToBuild() != null && Input.GetKeyDown(KeyCode.R))
+        {
+            rotateButton();
+        }
     }
 
     public void timeToggle()

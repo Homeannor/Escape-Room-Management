@@ -127,7 +127,9 @@ MonoBehaviour:
   rotaion2: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   rotaion3: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   rotaion4: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
+  Preview: 0
   Build: {fileID: 0}
+  Previews: {fileID: 0}
   previewImage: {fileID: 0}
   cancelButton: {fileID: 0}
   rotateButton: {fileID: 0}

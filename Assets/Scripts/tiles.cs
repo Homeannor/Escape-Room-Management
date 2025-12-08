@@ -25,6 +25,8 @@ public class tiles : MonoBehaviour
     public GameObject cancelButton;
     public GameObject rotateButton;
 
+    public int buildAmount = 0;
+
     Buildmanager BM;
 
     private Renderer rend;
@@ -63,8 +65,6 @@ public class tiles : MonoBehaviour
             rotateButton.SetActive(false);      
         }
 
-        
-
     }
 
     private void OnMouseDown()
@@ -79,11 +79,11 @@ public class tiles : MonoBehaviour
             return;
         }
 
-        if (Build != null)
-        {
+       if (Build != null && buildAmount >= 5)
+       {
             Debug.Log("cant build here");
             return;
-        }
+       }
 
         placement(false);
     }
@@ -98,6 +98,7 @@ public class tiles : MonoBehaviour
         {
             placement(true);
         }
+
 
         rend.material.color = hoverColour;
     }
@@ -119,6 +120,8 @@ public class tiles : MonoBehaviour
     {
         if(!_preview)
         {
+            buildAmount++;
+
             if(BM.Angle == 0)
             {
                 GameObject BuildingToBuild = BM.GetBuildingToBuild();
