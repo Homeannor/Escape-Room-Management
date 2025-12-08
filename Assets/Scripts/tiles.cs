@@ -14,9 +14,13 @@ public class tiles : MonoBehaviour
     public Quaternion rotaion3;
     public Quaternion rotaion4;
 
+    public bool Preview;
+
 
 
     public GameObject Build;
+
+    public GameObject Previews;
     public GameObject previewImage;
     public GameObject cancelButton;
     public GameObject rotateButton;
@@ -24,8 +28,10 @@ public class tiles : MonoBehaviour
     Buildmanager BM;
 
     private Renderer rend;
+    public Material previewMaterial;
 
     private GameObject itemPrefabs;
+    private GameObject previewItemPrefabs;
 
 
     private void Start()
@@ -35,6 +41,7 @@ public class tiles : MonoBehaviour
         startColour = rend.material.color;
         BM = Buildmanager.instance;
         itemPrefabs = GameObject.Find("== ITEM PREFABS ==");
+        previewItemPrefabs = GameObject.Find("== PREVIEW PREFABS ==");
 
         previewImage = GameObject.FindWithTag("PreviewImage");
         cancelButton = GameObject.FindWithTag("CancelButton");
@@ -78,7 +85,7 @@ public class tiles : MonoBehaviour
             return;
         }
 
-        placement();
+        placement(false);
     }
 
     private void OnMouseEnter()
@@ -86,6 +93,10 @@ public class tiles : MonoBehaviour
         if (BM.GetBuildingToBuild() == null)
         {
             return;
+        }
+        else
+        {
+            placement(true);
         }
 
         rend.material.color = hoverColour;
@@ -96,35 +107,70 @@ public class tiles : MonoBehaviour
     private void OnMouseExit()
     {
         rend.material.color = startColour;
+
+        if (Previews != null)
+        {
+            GameObject.Destroy(Previews);
+            Previews = null;
+        }
     }
    
-    private void placement()
+    private void placement(bool _preview)
     {
-        if(BM.Angle == 0)
+        if(!_preview)
         {
-            GameObject BuildingToBuild = BM.GetBuildingToBuild();
-            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion1, itemPrefabs.transform);
-            Build.SetActive(true);
+            if(BM.Angle == 0)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion1, itemPrefabs.transform);
+                Build.SetActive(true);
+            }
+            else if (BM.Angle == 1)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion2, itemPrefabs.transform);
+                Build.SetActive(true);
+            }
+            else if (BM.Angle == 2)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion3, itemPrefabs.transform);
+                Build.SetActive(true);
+            }
+            else if (BM.Angle == 3)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion4, itemPrefabs.transform);
+                Build.SetActive(true);
+            }
         }
-        else if (BM.Angle == 1)
+        else
         {
-            GameObject BuildingToBuild = BM.GetBuildingToBuild();
-            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion2, itemPrefabs.transform);
-            Build.SetActive(true);
+            if(BM.Angle == 0)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion1, previewItemPrefabs.transform);
+                Previews.SetActive(true);
+            }
+            else if (BM.Angle == 1)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion2, previewItemPrefabs.transform);
+                Previews.SetActive(true);
+            }
+            else if (BM.Angle == 2)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion3, previewItemPrefabs.transform);
+                Previews.SetActive(true);
+            }
+            else if (BM.Angle == 3)
+            {
+                GameObject BuildingToBuild = BM.GetBuildingToBuild();
+                Previews = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion4, previewItemPrefabs.transform);
+                Previews.SetActive(true);
+            }
         }
-        else if (BM.Angle == 2)
-        {
-            GameObject BuildingToBuild = BM.GetBuildingToBuild();
-            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion3, itemPrefabs.transform);
-            Build.SetActive(true);
-        }
-        else if (BM.Angle == 3)
-        {
-            GameObject BuildingToBuild = BM.GetBuildingToBuild();
-            Build = (GameObject)Instantiate(BuildingToBuild, transform.position + positionOffSet, transform.rotation * rotaion4, itemPrefabs.transform);
-            Build.SetActive(true);
-        }
-
     }
 
 
