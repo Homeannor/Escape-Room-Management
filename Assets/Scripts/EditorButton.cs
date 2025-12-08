@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class EditorButton : MonoBehaviour
 {
+
+    public static EditorButton instance;
     private RoomEditor roomEditor;
     private GameObject itemPrefabs;
     private GameObject previewItemPrefabs;
@@ -13,6 +15,7 @@ public class EditorButton : MonoBehaviour
     [System.Obsolete]
     void Start()
     {
+        instance = this;
         Bm = Buildmanager.instance;
         T = tiles.instance;
         roomEditor = FindObjectOfType<RoomEditor>();
@@ -33,23 +36,6 @@ public class EditorButton : MonoBehaviour
         Debug.Log("Item Selected: " + itemPrefabs.transform.Find(gameObject.name));
         Bm.SetBuildingTobuild(itemPrefabs.transform.Find(gameObject.name).gameObject);
         roomEditor.OpenClosePanel();
-        
-        /*if (!T.Preview)
-        {
-            previewImage.SetActive(true);
-            previewImage.GetComponent<Image>().sprite = gameObject.GetComponent<Image>().sprite;
-            Debug.Log("Item Selected: " + itemPrefabs.transform.Find(gameObject.name));
-            Bm.SetBuildingTobuild(itemPrefabs.transform.Find(gameObject.name).gameObject);
-            roomEditor.OpenClosePanel();
-        }
-        else
-        {
-            previewImage.SetActive(true);
-            previewImage.GetComponent<Image>().sprite = gameObject.GetComponent<Image>().sprite;
-            Debug.Log("Item Selected: " + previewItemPrefabs.transform.Find(gameObject.name));
-            Bm.SetBuildingTobuild(previewItemPrefabs.transform.Find(gameObject.name).gameObject);
-            roomEditor.OpenClosePanel();
-        }*/
-        
     }
+   
 }

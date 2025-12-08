@@ -23,15 +23,15 @@ public class RoomEditor : MonoBehaviour
     {
         if (PanelCanvas.activeSelf)
         {
-            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(false);
-            Debug.Log("PanelCanvas set to false");
+            //Debug.Log("PanelCanvas set to false");
         }
         else
         {
-            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(true);
-            Debug.Log("PanelCanvas set to true");
+            //Debug.Log("PanelCanvas set to true");
         }
 
         //PanelCanvas.SetActive(true ? false : true);
@@ -54,6 +54,7 @@ public class RoomEditor : MonoBehaviour
         if (BM.GetBuildingToBuild() != null && Input.GetKeyDown(KeyCode.Escape))
         {
             cancelButton();
+            
             return;
         }
         else if(Input.GetKeyDown(KeyCode.Escape))
@@ -95,6 +96,7 @@ public class RoomEditor : MonoBehaviour
     public void cancelButton()
     {
         tiles.instance.previewImage.SetActive(false);
+        tiles.instance.Previews = null;
         Buildmanager.instance.SetBuildingTobuild(null);   
     }
 
