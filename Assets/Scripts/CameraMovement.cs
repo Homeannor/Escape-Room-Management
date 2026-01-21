@@ -5,7 +5,8 @@ using System.Numerics;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float startMoveSpeed = 5f;
+    public float moveSpeed;
     public float rotationSpeed = 50f;
 
     public Camera topDownCamera;
@@ -30,11 +31,11 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            moveSpeed = 20f;
+            moveSpeed *= 2f;
         }
         else
         {
-            moveSpeed = 10f;
+            moveSpeed = startMoveSpeed;
         }
 
         if (Input.GetKey(KeyCode.D))
