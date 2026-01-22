@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5999347209280704933}
   - component: {fileID: 2837034596007645079}
   - component: {fileID: 5957854601556528056}
-  - component: {fileID: 6847873363893622652}
+  - component: {fileID: 6967407533517605953}
   m_Layer: 0
   m_Name: Room 1
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6847873363893622652
+--- !u!114 &6967407533517605953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,9 +119,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3603516449468367415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fb69c8894656947932615330a81b7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1429f64d536d7834d87320071e4659b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomCost: 500
+  newRoomButton: {fileID: 6597315763638930669}
+  roomPrefab: {fileID: 3603516449468367415}
 --- !u!1 &4966279157747687697
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6847873363893622652}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BuildScene
         m_Mode: 1
@@ -417,7 +420,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7145588340905320970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.224e-12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -492,7 +495,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -511,7 +514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6847873363893622652}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BuildScene
         m_Mode: 1
