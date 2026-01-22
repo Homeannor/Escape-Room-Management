@@ -7,11 +7,15 @@ TagManager:
   - PreviewImage
   - CancelButton
   - RotateButton
+  - Chest
+  - Tomb
+  - Door
+  - Customer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NavMesh
   - Water
   - UI
   - 
