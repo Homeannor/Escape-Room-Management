@@ -4,7 +4,7 @@ public class BuildingOverhaul : MonoBehaviour
 {
 
     [SerializeField]
-    private Camera sceneCamera;
+    public Camera sceneCamera;
 
     private Vector3 lastPostion;
 
