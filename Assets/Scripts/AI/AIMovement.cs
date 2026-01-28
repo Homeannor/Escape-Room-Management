@@ -3,7 +3,6 @@ using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
-    public static AIMovement instance;
     private NavMeshAgent agent;
     [SerializeField] LayerMask groundLayer;
     private Vector3 targetLocation;
@@ -12,17 +11,18 @@ public class AIMovement : MonoBehaviour
 
     private void Start()
     {
-        instance = this;
         agent = GetComponent<NavMeshAgent>();
+        //RandomMovement();
     }
 
     private void Update()
     {
         RandomMovement();
     }
-    void RandomMovement()
+
+    public void RandomMovement()
     {
-        gameObject.GetComponent<NavMeshAgent>().speed = 10;
+        //gameObject.GetComponent<NavMeshAgent>().speed = 10;
         if (!hasTargetLocation)
         {
             SearchForTarget();
@@ -52,5 +52,10 @@ public class AIMovement : MonoBehaviour
     public void StopMoving()
     {
         gameObject.GetComponent<NavMeshAgent>().speed = 0;
+    }
+
+    public void StartMoving()
+    {
+        gameObject.GetComponent<NavMeshAgent>().speed = 10;
     }
 }

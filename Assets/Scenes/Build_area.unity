@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4a75b06e0387f4da5bc59c6c7b6959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  startMoveSpeed: 10
   rotationSpeed: 100
   topDownCamera: {fileID: 1434225256}
   isometricCamera: {fileID: 1503588035}
@@ -23834,7 +23834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1013495075
 RectTransform:
   m_ObjectHideFlags: 0

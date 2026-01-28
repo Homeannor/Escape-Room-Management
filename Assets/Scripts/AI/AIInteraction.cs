@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIInteraction : MonoBehaviour
 {
@@ -8,29 +9,33 @@ public class AIInteraction : MonoBehaviour
     public GameObject openTomb;
     public GameObject closedDoor;
     public GameObject openDoor;
+
     private void OnTriggerEnter(Collider other)
     {
-        AIMovement.instance.StopMoving();
+        //Debug.Log("Customer touched an object");
+        
+        GetComponent<AIMovement>().StopMoving();
+        
         if (other.CompareTag("Chest"))
         {
             //open chest
             closedChest.SetActive(false);
             openChest.SetActive(true);
-            Invoke("AIMovement.instance.RandomMovement", 5f);
+            GetComponent<AIMovement>().Invoke("StartMoving", 5f);
         }
         if (other.CompareTag("Tomb"))
         {
             //open tomb
             closedTomb.SetActive(false);
             openTomb.SetActive(true);
-            Invoke("AIMovement.instance.RandomMovement", 5f);
+            GetComponent<AIMovement>().Invoke("StartMoving", 5f);
         }
         if (other.CompareTag("Door"))
         {
             //open door
             closedDoor.SetActive(false);
             openDoor.SetActive(true);
-            Invoke("AIMovement.instance.RandomMovement", 5f);
+            GetComponent<AIMovement>().Invoke("StartMoving", 5f);
         }
     }
 }

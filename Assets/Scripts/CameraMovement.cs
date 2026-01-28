@@ -5,8 +5,8 @@ using System.Numerics;
 
 public class CameraMovement : MonoBehaviour
 {
-    private float startMoveSpeed = 30f;
-    public float moveSpeed;
+    public float startMoveSpeed = 30f;
+    private float moveSpeed;
     public float rotationSpeed = 50f;
 
     public Camera topDownCamera;

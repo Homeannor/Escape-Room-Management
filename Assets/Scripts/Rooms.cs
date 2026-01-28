@@ -15,7 +15,7 @@ public class Rooms : MonoBehaviour
     }
     void Update()
     {
-        if (GameManager.Instance.cash >= 500)
+        if (PlayerPrefs.GetInt("Cash", 750) >= roomCost)
         {
             newRoomButton.interactable = true;
         }
@@ -28,8 +28,10 @@ public class Rooms : MonoBehaviour
     public void BuildNewRoom()
     {
         GameManager.Instance.cash -= roomCost;
+        PlayerPrefs.SetInt("Cash", GameManager.Instance.cash);
+
         roomPrefab.SetActive(false);
-        Invoke("BuildScene", 3f);
+        Invoke("BuildScene", 1f);
     }
 
     public void BuildScene()
