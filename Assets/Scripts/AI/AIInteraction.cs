@@ -9,6 +9,8 @@ public class AIInteraction : MonoBehaviour
     public GameObject openTomb;
     public GameObject closedDoor;
     public GameObject openDoor;
+    public GameObject key; 
+    public bool hasKey = false;   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,9 +20,12 @@ public class AIInteraction : MonoBehaviour
         
         if (other.CompareTag("Chest"))
         {
-            //open chest
-            closedChest.SetActive(false);
-            openChest.SetActive(true);
+            //open chest if they have key
+            if (hasKey == true)
+            {
+                closedChest.SetActive(false);
+                openChest.SetActive(true);
+            }
             GetComponent<AIMovement>().Invoke("StartMoving", 5f);
         }
         if (other.CompareTag("Tomb"))
@@ -35,6 +40,13 @@ public class AIInteraction : MonoBehaviour
             //open door
             closedDoor.SetActive(false);
             openDoor.SetActive(true);
+            GetComponent<AIMovement>().Invoke("StartMoving", 5f);
+        }
+        if (other.CompareTag("Key"))
+        {
+            Debug.Log("AI picked up the key");
+            hasKey = true;
+            key.SetActive(false);
             GetComponent<AIMovement>().Invoke("StartMoving", 5f);
         }
     }

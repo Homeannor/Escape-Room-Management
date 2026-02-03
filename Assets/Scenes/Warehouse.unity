@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744016369956387479, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.912262
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 744016369956387479, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -289,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744016369956387479, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.697418
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 744016369956387479, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -905,6 +905,7 @@ Transform:
   - {fileID: 1002112922}
   - {fileID: 157920256}
   - {fileID: 529659613}
+  - {fileID: 2805615103158482528}
   - {fileID: 1624250139}
   - {fileID: 657063282}
   - {fileID: 892985712}
@@ -1538,7 +1539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2975603294799178943, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.550003
+      value: -19.04
       objectReference: {fileID: 0}
     - target: {fileID: 2975603294799178943, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1792,7 +1793,7 @@ Transform:
   m_GameObject: {fileID: 657063281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.17, y: 2.16, z: 2.7}
+  m_LocalPosition: {x: -16.51, y: 2.16, z: 5.84}
   m_LocalScale: {x: 2.07949, y: 2.07949, z: 2.07949}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1930,6 +1931,7 @@ MonoBehaviour:
   openTomb: {fileID: 1223992972}
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
+  key: {fileID: 2762029672350249201}
 --- !u!54 &657063289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2130,7 +2132,7 @@ Transform:
   m_GameObject: {fileID: 879555221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.82, y: 2.16, z: -2.9}
+  m_LocalPosition: {x: 23.1, y: 2.16, z: -21.31}
   m_LocalScale: {x: 2.07949, y: 2.07949, z: 2.07949}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2181,6 +2183,7 @@ MonoBehaviour:
   openTomb: {fileID: 1223992972}
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
+  key: {fileID: 2762029672350249201}
 --- !u!114 &879555225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2327,7 +2330,7 @@ Transform:
   m_GameObject: {fileID: 892985711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.17, y: 2.16, z: -2.9000022}
+  m_LocalPosition: {x: -13.06, y: 2.16, z: -7.27}
   m_LocalScale: {x: 2.07949, y: 2.07949, z: 2.07949}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2378,6 +2381,7 @@ MonoBehaviour:
   openTomb: {fileID: 1223992972}
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
+  key: {fileID: 2762029672350249201}
 --- !u!114 &892985715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2816,7 +2820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942593044155050983, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.57
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 2942593044155050983, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3781,7 +3785,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 1
-  m_NavMeshData: {fileID: 23800000, guid: 963488a3f68569849997ca42a40340da, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f840703178bdaaf49951e25778a35ca3, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1700605896
 GameObject:
@@ -3815,7 +3819,7 @@ Transform:
   m_GameObject: {fileID: 1700605896}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.82, y: 2.16, z: 2.7}
+  m_LocalPosition: {x: 11.27, y: 2.16, z: 25.93}
   m_LocalScale: {x: 2.07949, y: 2.07949, z: 2.07949}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3866,6 +3870,7 @@ MonoBehaviour:
   openTomb: {fileID: 1223992972}
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
+  key: {fileID: 2762029672350249201}
 --- !u!114 &1700605900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4212,6 +4217,146 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112019779}
   m_CullTransparentMesh: 1
+--- !u!1 &2762029672350249201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2805615103158482528}
+  - component: {fileID: 2805615103158482529}
+  m_Layer: 3
+  m_Name: Wooden_Key
+  m_TagString: Key
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2805615103158482528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762029672350249201}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.97, y: 1.3, z: -25.09}
+  m_LocalScale: {x: 2.8473, y: 2.8473, z: 2.8473}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6176655202247545163}
+  m_Father: {fileID: 386616256}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2805615103158482529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762029672350249201}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2738916, y: 0.8072404, z: 2.1347668}
+  m_Center: {x: -0.047432844, y: -0.044969026, z: 0.20086771}
+--- !u!23 &5043134325098768932
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844402170435521521}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ef0824eada276334d9fca20c87e5430f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &6176655202247545163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844402170435521521}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2805615103158482528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &6844402170435521521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6176655202247545163}
+  - component: {fileID: 7068461991371185902}
+  - component: {fileID: 5043134325098768932}
+  m_Layer: 3
+  m_Name: Wooden Key
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!33 &7068461991371185902
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844402170435521521}
+  m_Mesh: {fileID: -4895873254365893986, guid: 74f06461375d4fa42bdd10146cdf6d13, type: 3}
 --- !u!1001 &8091343592314020835
 PrefabInstance:
   m_ObjectHideFlags: 0
