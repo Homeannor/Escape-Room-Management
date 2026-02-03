@@ -12,6 +12,7 @@ TagManager:
   - Door
   - Customer
   - Key
+  - BuildOptions
   layers:
   - Default
   - TransparentFX

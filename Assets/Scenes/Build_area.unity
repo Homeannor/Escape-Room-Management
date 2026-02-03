@@ -9484,6 +9484,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7997772401279237651, guid: efc7d09c433635d48981c6f9cd99307d, type: 3}
   m_PrefabInstance: {fileID: 423921209}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &431286882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431286883}
+  m_Layer: 5
+  m_Name: Build_Options
+  m_TagString: BuildOptions
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &431286883
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431286882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1689620747}
+  - {fileID: 1061824610}
+  m_Father: {fileID: 1084337006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &436658047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13321,7 +13358,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570458512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25080,7 +25117,7 @@ GameObject:
   - component: {fileID: 1061824611}
   m_Layer: 5
   m_Name: Cancel_Button
-  m_TagString: CancelButton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25092,19 +25129,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061824609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.54266524, y: 1.828403, z: 1}
+  m_LocalScale: {x: 0.54266524, y: 1.8284031, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 79738897}
   - {fileID: 1960795828}
-  m_Father: {fileID: 1084337006}
+  m_Father: {fileID: 431286883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.012364238, y: 0.763}
   m_AnchorMax: {x: 0.125, y: 0.8998274}
-  m_AnchoredPosition: {x: 1692, y: -805.2}
-  m_SizeDelta: {x: 60.2039, y: -63.0641}
+  m_AnchoredPosition: {x: 907.00146, y: -480.41452}
+  m_SizeDelta: {x: 265.201, y: 71.02672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061824611
 MonoBehaviour:
@@ -25366,14 +25403,13 @@ RectTransform:
   - {fileID: 2112019780}
   - {fileID: 326125484}
   - {fileID: 1019181165}
-  - {fileID: 1061824610}
-  - {fileID: 1689620747}
   - {fileID: 1406763351}
   - {fileID: 990804600}
   - {fileID: 2070624132}
   - {fileID: 2129895802}
-  - {fileID: 570458513}
   - {fileID: 1557522900}
+  - {fileID: 570458513}
+  - {fileID: 431286883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -40028,7 +40064,7 @@ GameObject:
   - component: {fileID: 1689620748}
   m_Layer: 5
   m_Name: RotateButton
-  m_TagString: RotateButton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40040,19 +40076,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689620746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.54266524, y: 1.828403, z: 1}
+  m_LocalScale: {x: 0.54266524, y: 1.8284031, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2050537960}
   - {fileID: 465998897}
-  m_Father: {fileID: 1084337006}
+  m_Father: {fileID: 431286883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.012364238, y: 0.763}
   m_AnchorMax: {x: 0.125, y: 0.8998274}
-  m_AnchoredPosition: {x: 1529.7, y: -805.2}
-  m_SizeDelta: {x: 60.2039, y: -63.0641}
+  m_AnchoredPosition: {x: 744.7012, y: -480.41452}
+  m_SizeDelta: {x: 265.201, y: 71.02672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689620748
 MonoBehaviour:
@@ -50828,6 +50864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horror_Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 1628511537515787985, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2942593044155050983, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50925,6 +50965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Temple_Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 3402630608768850476, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50982,6 +51026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4125500081515247829, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51038,6 +51086,10 @@ PrefabInstance:
     - target: {fileID: 5906978872227765481, guid: 68b74b22d09796245913b6fd85d4b8ae, type: 3}
       propertyPath: m_Name
       value: Wooden_Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906978872227765481, guid: 68b74b22d09796245913b6fd85d4b8ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
