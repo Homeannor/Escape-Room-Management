@@ -22,8 +22,7 @@ public class tiles : MonoBehaviour
 
     public GameObject Previews;
     public GameObject previewImage;
-    public GameObject cancelButton;
-    public GameObject rotateButton;
+    public GameObject buildOptions;
 
     public int buildAmount = 0;
 
@@ -46,8 +45,8 @@ public class tiles : MonoBehaviour
         previewItemPrefabs = GameObject.Find("== PREVIEW PREFABS ==");
 
         previewImage = GameObject.FindWithTag("PreviewImage");
-        cancelButton = GameObject.FindWithTag("CancelButton");
-        rotateButton = GameObject.FindWithTag("RotateButton");
+        buildOptions = GameObject.FindWithTag("BuildOptions");
+
     }
 
     void Update()
@@ -55,14 +54,12 @@ public class tiles : MonoBehaviour
         if (BM.GetBuildingToBuild() != null)
         {
             //previewImage.SetActive(true);      
-            cancelButton.SetActive(true);      
-            rotateButton.SetActive(true);         
+            buildOptions.SetActive(true);      
         }
         else
         {
             //previewImage.SetActive(false);      
-            cancelButton.SetActive(false);
-            rotateButton.SetActive(false);      
+            buildOptions.SetActive(false);  
         }
 
         if (Input.GetKeyUp(KeyCode.R) && Preview)
