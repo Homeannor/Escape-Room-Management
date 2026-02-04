@@ -5,7 +5,7 @@ public class AIMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
     [SerializeField] LayerMask groundLayer;
-    private Vector3 targetLocation;
+    public Vector3 targetLocation;
     private bool hasTargetLocation;
     [SerializeField] float range;
 

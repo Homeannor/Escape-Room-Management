@@ -321,11 +321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2094833474708242983, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3146915106833877761, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3402630608768850476, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Name
@@ -333,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3402630608768850476, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3402630608768850476, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_TagString
@@ -341,15 +341,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4088143516246854327, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5450288919380827743, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7448037924422132709, guid: 3def5df25e8431947b9809ed16176e9d, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 516076250}
   - component: {fileID: 516076249}
   - component: {fileID: 516076248}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 468039765373997499, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 862248086151658912, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_Layer
@@ -1543,7 +1543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2975603294799178943, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 2975603294799178943, guid: a25c6d494ce9fc045a8dd02402b67ce4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1845,7 +1845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eaba2ce288e85954a81ba972d79fdce8, type: 2}
+  - {fileID: 2100000, guid: 2c2f66002f5b8f64687bf38f2203e1ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1912,6 +1912,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  targetLocation: {x: 0, y: 0, z: 0}
   range: 20
 --- !u!114 &657063288
 MonoBehaviour:
@@ -1932,6 +1933,7 @@ MonoBehaviour:
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
   key: {fileID: 2762029672350249201}
+  hasKey: 0
 --- !u!54 &657063289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2184,6 +2186,7 @@ MonoBehaviour:
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
   key: {fileID: 2762029672350249201}
+  hasKey: 0
 --- !u!114 &879555225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,6 +2202,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  targetLocation: {x: 0, y: 0, z: 0}
   range: 20
 --- !u!195 &879555226
 NavMeshAgent:
@@ -2268,7 +2272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eaba2ce288e85954a81ba972d79fdce8, type: 2}
+  - {fileID: 2100000, guid: 5099b01a38f4f8947989ffebe68ce0f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2382,6 +2386,7 @@ MonoBehaviour:
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
   key: {fileID: 2762029672350249201}
+  hasKey: 0
 --- !u!114 &892985715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,6 +2402,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  targetLocation: {x: 0, y: 0, z: 0}
   range: 20
 --- !u!195 &892985716
 NavMeshAgent:
@@ -2784,7 +2790,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9940478767560010, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1628511537515787985, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_Name
@@ -2792,7 +2798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628511537515787985, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1628511537515787985, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_TagString
@@ -2852,7 +2858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6898572909301000090, guid: 64f79623cb0722b4089e4d7333b3e412, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3165,7 +3171,7 @@ GameObject:
   - component: {fileID: 1167632945}
   - component: {fileID: 1167632944}
   - component: {fileID: 1167632943}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Obstacle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3659,7 +3665,7 @@ GameObject:
   - component: {fileID: 1624250141}
   - component: {fileID: 1624250140}
   - component: {fileID: 1624250143}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3774,7 +3780,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 192
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -3871,6 +3877,7 @@ MonoBehaviour:
   closedDoor: {fileID: 777195566}
   openDoor: {fileID: 1334257192}
   key: {fileID: 2762029672350249201}
+  hasKey: 0
 --- !u!114 &1700605900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3886,6 +3893,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  targetLocation: {x: 0, y: 0, z: 0}
   range: 20
 --- !u!195 &1700605901
 NavMeshAgent:
@@ -3955,7 +3963,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eaba2ce288e85954a81ba972d79fdce8, type: 2}
+  - {fileID: 2100000, guid: 570b4e2ed1c4af0409818707c017bab3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4325,7 +4333,7 @@ Transform:
   m_GameObject: {fileID: 6844402170435521521}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.233, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4342,7 +4350,7 @@ GameObject:
   - component: {fileID: 6176655202247545163}
   - component: {fileID: 7068461991371185902}
   - component: {fileID: 5043134325098768932}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Wooden Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
