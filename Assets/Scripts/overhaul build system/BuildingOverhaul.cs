@@ -1,4 +1,9 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 public class BuildingOverhaul : MonoBehaviour
 {
@@ -10,6 +15,26 @@ public class BuildingOverhaul : MonoBehaviour
 
     [SerializeField]
     private LayerMask placementLayermask;
+
+    public event Action Onclicked, OnExit;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Onclicked?.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnExit?.Invoke();
+        }
+    }
+
+
+    public bool IsPointerOverUI()
+     =>  EventSystem.current.IsPointerOverGameObject();
+   
+
 
     public Vector3 GetSelectedMapPosition()
     {
