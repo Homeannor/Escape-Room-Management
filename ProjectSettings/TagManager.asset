@@ -18,6 +18,7 @@ TagManager:
   - TransparentFX
   - Ignore Raycast
   - NavMesh
+  - placement area
   - Water
   - UI
   - ground

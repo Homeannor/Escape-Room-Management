@@ -57,7 +57,7 @@ public class RoomEditor : MonoBehaviour
             
             return;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape))
+        else if(Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene(0);
         }

@@ -9,6 +9,12 @@ public class SwitchCamera : MonoBehaviour
     public GameObject cameraButton;
     public TextMeshProUGUI cameraButtonText;
     public int Manager;
+    [SerializeField]
+    private BuildingOverhaul BO;
+
+    public Camera isocamera;
+    public Camera topDcamera;
+        
 
     void Start()
     {
@@ -43,6 +49,7 @@ public class SwitchCamera : MonoBehaviour
         topDownCamera.SetActive(false);
         isometricCamera.GetComponent<AudioListener>().enabled = true;
         topDownCamera.GetComponent<AudioListener>().enabled = false;
+        BO.sceneCamera = isocamera;
     }
     void Cam_TopDown()
     {
@@ -50,6 +57,7 @@ public class SwitchCamera : MonoBehaviour
         topDownCamera.SetActive(true);
         isometricCamera.GetComponent<AudioListener>().enabled = false;
         topDownCamera.GetComponent<AudioListener>().enabled = true;
+        BO.sceneCamera = topDcamera;
     }
 }
  
