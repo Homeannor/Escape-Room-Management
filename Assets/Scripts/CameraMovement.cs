@@ -5,7 +5,8 @@ using System.Numerics;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float startMoveSpeed = 30f;
+    private float moveSpeed;
     public float rotationSpeed = 50f;
 
     public Camera topDownCamera;
@@ -13,7 +14,8 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        /*float moveX = Input.GetAxis("Horizontal");
+        /*Debug.Log("Speed: " + moveSpeed);
+        float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         UnityEngine.Vector3 move = new UnityEngine.Vector3(moveX, 0, moveZ);
@@ -30,11 +32,11 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            moveSpeed = 20f;
+            moveSpeed = startMoveSpeed * 2;
         }
         else
         {
-            moveSpeed = 10f;
+            moveSpeed = startMoveSpeed;
         }
 
         if (Input.GetKey(KeyCode.D))
