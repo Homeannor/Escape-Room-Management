@@ -60,12 +60,12 @@ public class placementsystem : MonoBehaviour
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
 
-        bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
-        if(placementVaild == false)
-        {
-            PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
-            return;
-        }
+       // bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
+      //  if(placementVaild == false)
+       // {
+       //     PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
+        //    return;
+       // }
         //play auido here
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab);
         newObject.transform.position = grid.CellToWorld(gridPostion);

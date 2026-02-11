@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsData:
   - <Name>k__BackingField: Horror_chest_closed
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
+    <ID>k__BackingField: 1
+    <Size>k__BackingField: {x: 1, y: 1}
     <PreFab>k__BackingField: {fileID: 8115912078846750115, guid: 97684346a678209418549b8627dfb20b, type: 3}
   - <Name>k__BackingField: Horror_Table
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 2, y: 1}
     <PreFab>k__BackingField: {fileID: 3149790938703417877, guid: 570b7d7cac703ba4d8cc54dfdf6672ab, type: 3}
   - <Name>k__BackingField: Horror_chair
-    <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 0, y: 0}
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 1, y: 1}
     <PreFab>k__BackingField: {fileID: 1874743025950594703, guid: d598bae8f174cc741bc9467dae60fe3c, type: 3}
