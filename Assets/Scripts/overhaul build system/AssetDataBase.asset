@@ -13,15 +13,75 @@ MonoBehaviour:
   m_Name: AssetDataBase
   m_EditorClassIdentifier: 
   objectsData:
-  - <Name>k__BackingField: Horror_chest_closed
+  - <Name>k__BackingField: Wooden_Wall
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 8115912078846750115, guid: 97684346a678209418549b8627dfb20b, type: 3}
-  - <Name>k__BackingField: Horror_Table
+    <PreFab>k__BackingField: {fileID: 20348307343381622, guid: ee2fe4978dda6d349b5ea3ae027d94bd, type: 3}
+  - <Name>k__BackingField: Wooden_Door
     <ID>k__BackingField: 2
-    <Size>k__BackingField: {x: 2, y: 1}
-    <PreFab>k__BackingField: {fileID: 3149790938703417877, guid: 570b7d7cac703ba4d8cc54dfdf6672ab, type: 3}
-  - <Name>k__BackingField: Horror_chair
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 673511324929110626, guid: 5f48b9f4788bdf245b1090d19ec87e28, type: 3}
+  - <Name>k__BackingField: Wooden_Key
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4492995744612523595, guid: f80da3efc93877e4aadcd7aa949328bf, type: 3}
+  - <Name>k__BackingField: Horror_Chair
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 1, y: 1}
     <PreFab>k__BackingField: {fileID: 1874743025950594703, guid: d598bae8f174cc741bc9467dae60fe3c, type: 3}
+  - <Name>k__BackingField: Horror_Table
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 3149790938703417877, guid: 570b7d7cac703ba4d8cc54dfdf6672ab, type: 3}
+  - <Name>k__BackingField: Horror_Wall
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 953974660042099558, guid: 5e189d2d4c6e7584c95535cd00f1e048, type: 3}
+  - <Name>k__BackingField: Horror_Door
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 6318736979838237095, guid: 436776b91df560c46a873511916e3213, type: 3}
+  - <Name>k__BackingField: Horror_Key
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4344216563262252920, guid: 3d32698cbb5fbc84a8c3b6c7d9f41b66, type: 3}
+  - <Name>k__BackingField: Horror_ChairCuffed
+    <ID>k__BackingField: 9
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 3579884295371044580, guid: 9d60b0ca9e5bc484a9321bd424f71a36, type: 3}
+  - <Name>k__BackingField: Horror_Chest
+    <ID>k__BackingField: 10
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 8115912078846750115, guid: 97684346a678209418549b8627dfb20b, type: 3}
+  - <Name>k__BackingField: Temple_Wall
+    <ID>k__BackingField: 11
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 1955035972919203725, guid: 7cc918506ff8a804888f6d73e4cffa2f, type: 3}
+  - <Name>k__BackingField: Temple_Door
+    <ID>k__BackingField: 12
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 5705365216506790509, guid: e97ac7bde9ba55e49926d850b8f7ad2a, type: 3}
+  - <Name>k__BackingField: Temple_Key
+    <ID>k__BackingField: 13
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4987215074321581539, guid: caad66cb26b9a9d4a9b26d98920f3b86, type: 3}
+  - <Name>k__BackingField: Temple_Tomb
+    <ID>k__BackingField: 14
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 2473169762279563264, guid: cab7fe567c8847b45a22ad58580904c0, type: 3}
+  - <Name>k__BackingField: Temple_Skeleton
+    <ID>k__BackingField: 15
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 7245979830867048251, guid: 06c25263d384cb24184f6db53e15f754, type: 3}
+  - <Name>k__BackingField: Candle
+    <ID>k__BackingField: 16
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 6334871544870252288, guid: ca9dfb9408e515847bfcec50cf7b143c, type: 3}
+  - <Name>k__BackingField: Candle_Tall
+    <ID>k__BackingField: 17
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 8578383113383162733, guid: cc8c3fb9897828444bf90fc2de51a0ed, type: 3}
+  - <Name>k__BackingField: Cobweb
+    <ID>k__BackingField: 18
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 3196595829711487305, guid: 380600f2412d6b646a5cf455fb73fb9f, type: 3}
