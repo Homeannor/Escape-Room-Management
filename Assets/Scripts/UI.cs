@@ -2,10 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Tilemaps;
-using UnityEngine.SceneManagement;
 
-public class RoomEditor : MonoBehaviour
+public class UI : MonoBehaviour
 {
     [SerializeField] private GameObject PanelCanvas;
     public GameObject directionalLight;
@@ -13,25 +11,20 @@ public class RoomEditor : MonoBehaviour
     private string timeOfDay = "Day";
     public GameObject timeButton;
     public TextMeshProUGUI timeButtonText;
-    Buildmanager BM;
-
-
-
-    //tiles tileInstance;
 
     public void OpenClosePanel()
     {
         if (PanelCanvas.activeSelf)
         {
-            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(false);
-            //Debug.Log("PanelCanvas set to false");
+            Debug.Log("PanelCanvas set to false");
         }
         else
         {
-            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(true);
-            //Debug.Log("PanelCanvas set to true");
+            Debug.Log("PanelCanvas set to true");
         }
 
         //PanelCanvas.SetActive(true ? false : true);
@@ -45,29 +38,6 @@ public class RoomEditor : MonoBehaviour
         directionalLight.transform.rotation = Quaternion.Euler(130f, -10f, 0f);
         timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
         timeButtonText.text = "DAYTIME";
-        BM = Buildmanager.instance;// link to build mager
-        //tileInstance = tiles.instance;
-    }
-
-    void Update()
-    {
-        if ( Input.GetKeyDown(KeyCode.Escape))
-        {
-
-            OpenClosePanel();
-
-
-            return;
-        }
-        else if(Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(0);
-        }
-
-        if (BM.GetBuildingToBuild() != null && Input.GetKeyDown(KeyCode.R))
-        {
-            rotateButton();
-        }
     }
 
     public void timeToggle()
@@ -94,27 +64,5 @@ public class RoomEditor : MonoBehaviour
             timeButtonText.text = "DAYTIME";
         }
     }
-
-    public void cancelButton()
-    {
-        tiles.instance.previewImage.SetActive(false);
-        tiles.instance.Previews = null;
-        Buildmanager.instance.SetBuildingTobuild(null);   
-    }
-
-    public void rotateButton()
-    {
-        BM.Anglechanges();
-    }
-
-  
-
-    /*public void RoomEditorButton()
-    {
-        Debug.Log("Item Selected: " + itemPrefab.name);
-        Bm.SetBuildingTobuild(itemPrefab);
-        OpenClosePanel();
-    }*/
-
 }
 
