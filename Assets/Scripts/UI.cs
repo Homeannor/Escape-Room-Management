@@ -51,10 +51,12 @@ public class RoomEditor : MonoBehaviour
 
     void Update()
     {
-        if (BM.GetBuildingToBuild() != null && Input.GetKeyDown(KeyCode.Escape))
+        if ( Input.GetKeyDown(KeyCode.Escape))
         {
-            cancelButton();
-            
+
+            OpenClosePanel();
+
+
             return;
         }
         else if(Input.GetKeyDown(KeyCode.P))

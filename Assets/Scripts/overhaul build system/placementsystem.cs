@@ -1,11 +1,11 @@
-using UnityEngine;
+                         using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 
 public class placementsystem : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField]   
     private GameObject mouseIndicator, cellIndicator;
     [SerializeField]
     private BuildingOverhaul BO;
@@ -28,13 +28,18 @@ public class placementsystem : MonoBehaviour
 
     private List <GameObject> PlacedGameObjects = new();
 
+    [SerializeField]
+    private RoomEditor RE;
 
-    private void start()
+
+
+    private void Start()
     {
         StopPlacement();
         floorData = new();
         PropData = new();
         PreviewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
+        
     }
 
     public void StartPlacement(int ID)
@@ -48,7 +53,7 @@ public class placementsystem : MonoBehaviour
         cellIndicator.SetActive(true);
         BO.Onclicked += PlaceStructure;
         BO.OnExit += StopPlacement;
-
+        RE.OpenClosePanel();
     }
 
     private void PlaceStructure()
@@ -60,12 +65,12 @@ public class placementsystem : MonoBehaviour
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
 
-       // bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
-      //  if(placementVaild == false)
-       // {
-       //     PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
-        //    return;
-       // }
+        bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
+        if(placementVaild == false)
+        {
+            PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
+            return;
+        }
         //play auido here
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab);
         newObject.transform.position = grid.CellToWorld(gridPostion);
@@ -104,6 +109,10 @@ public class placementsystem : MonoBehaviour
 
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
+
+        bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
+        PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
+       
         mouseIndicator.transform.position = mousePostion;
         cellIndicator.transform.position = grid.CellToWorld(gridPostion);
     }

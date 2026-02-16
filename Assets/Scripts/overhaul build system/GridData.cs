@@ -14,19 +14,17 @@ public class GridData
         foreach (var pos in positionToOccupy)
         {
             if (placedObject.ContainsKey(pos))
-            {
-
-            }
+                throw new Exception($"Dictionary alrady contains this cell position{pos}");
             placedObject[pos] = data;
         }
     }
 
-    private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector2Int objectsize)
+    private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector2Int objectSize)
     {
         List<Vector3Int> returnVal = new();
-        for (int x = 0; x < objectsize.x; x++)
+        for (int x = 0; x < objectSize.x; x++)
         {
-            for (int y = 0; y < objectsize.y; y++)
+            for (int y = 0; y < objectSize.y; y++)
             {
                 returnVal.Add(gridPosition + new Vector3Int(x, 0, y));
             }
@@ -35,9 +33,9 @@ public class GridData
         return returnVal;
     }
 
-    public bool CanPlaceObjectAt(Vector3Int gridPosition, Vector2Int objectsize)
+    public bool CanPlaceObjectAt(Vector3Int gridPosition, Vector2Int objectSize)
     {
-        List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectsize);
+        List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectSize);
         foreach (var pos in positionToOccupy)
         {
             if (placedObject.ContainsKey(pos))
