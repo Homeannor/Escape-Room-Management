@@ -22526,7 +22526,7 @@ MonoBehaviour:
   grid: {fileID: 2008631672}
   database: {fileID: 11400000, guid: e3ca04c2e8449574693c5827d89176cf, type: 2}
   gridVisual: {fileID: 452066321}
-  RE: {fileID: 1084337007}
+  RE: {fileID: 1084337009}
 --- !u!1001 &916973823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25766,6 +25766,7 @@ GameObject:
   - component: {fileID: 1084337003}
   - component: {fileID: 1084337007}
   - component: {fileID: 1084337008}
+  - component: {fileID: 1084337009}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25894,6 +25895,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fb69c8894656947932615330a81b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1084337009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084337002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99922fe4aab6f894b9957dd73d4b131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelCanvas: {fileID: 0}
+  directionalLight: {fileID: 0}
+  timeButton: {fileID: 0}
+  timeButtonText: {fileID: 0}
 --- !u!1001 &1084950335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51522,7 +51539,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2442067107310950428, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51563,6 +51592,10 @@ PrefabInstance:
     - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465473653164791488, guid: 72c14992ee3c4ab4a9362bf047b6d474, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

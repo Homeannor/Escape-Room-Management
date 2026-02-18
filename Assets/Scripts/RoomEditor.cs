@@ -100,6 +100,7 @@ public class RoomEditor : MonoBehaviour
         tiles.instance.previewImage.SetActive(false);
         tiles.instance.Previews = null;
         Buildmanager.instance.SetBuildingTobuild(null);   
+        OpenClosePanel();
     }
 
     public void rotateButton()
