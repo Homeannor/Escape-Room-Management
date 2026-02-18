@@ -25907,7 +25907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99922fe4aab6f894b9957dd73d4b131b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelCanvas: {fileID: 0}
+  PanelCanvas: {fileID: 1557522896}
   directionalLight: {fileID: 0}
   timeButton: {fileID: 0}
   timeButtonText: {fileID: 0}
