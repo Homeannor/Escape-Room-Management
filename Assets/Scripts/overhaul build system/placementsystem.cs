@@ -29,7 +29,7 @@ public class placementsystem : MonoBehaviour
     private List <GameObject> PlacedGameObjects = new();
 
     [SerializeField]
-    private RoomEditor RE;
+    private UI RE;
 
 
 
