@@ -13626,7 +13626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13634,7 +13634,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -22526,7 +22526,9 @@ MonoBehaviour:
   grid: {fileID: 2008631672}
   database: {fileID: 11400000, guid: e3ca04c2e8449574693c5827d89176cf, type: 2}
   gridVisual: {fileID: 452066321}
-  RE: {fileID: 1084337009}
+  previewImage: {fileID: 570458514}
+  RE: {fileID: 1084337007}
+  buildOptions: {fileID: 431286882}
 --- !u!1001 &916973823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25631,8 +25633,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1084337007}
-        m_TargetAssemblyTypeName: RoomEditor, Assembly-CSharp
+      - m_Target: {fileID: 1525573928}
+        m_TargetAssemblyTypeName: BuildingOverhaul, Assembly-CSharp
         m_MethodName: cancelButton
         m_Mode: 1
         m_Arguments:
@@ -25766,7 +25768,6 @@ GameObject:
   - component: {fileID: 1084337003}
   - component: {fileID: 1084337007}
   - component: {fileID: 1084337008}
-  - component: {fileID: 1084337009}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25895,22 +25896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fb69c8894656947932615330a81b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1084337009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084337002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99922fe4aab6f894b9957dd73d4b131b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PanelCanvas: {fileID: 1557522896}
-  directionalLight: {fileID: 0}
-  timeButton: {fileID: 0}
-  timeButtonText: {fileID: 0}
 --- !u!1001 &1084950335
 PrefabInstance:
   m_ObjectHideFlags: 0

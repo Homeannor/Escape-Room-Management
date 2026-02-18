@@ -18,6 +18,8 @@ public class BuildingOverhaul : MonoBehaviour
 
     public event Action Onclicked, OnExit;
 
+    
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,6 +30,11 @@ public class BuildingOverhaul : MonoBehaviour
         {
             OnExit?.Invoke();
         }
+    }
+
+    public void cancelButton()
+    {
+        OnExit?.Invoke();
     }
 
 

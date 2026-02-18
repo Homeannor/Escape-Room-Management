@@ -1,4 +1,5 @@
-                         using UnityEngine;
+using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,9 +28,12 @@ public class placementsystem : MonoBehaviour
     private Renderer PreviewRenderer;
 
     private List <GameObject> PlacedGameObjects = new();
+    [SerializeField] private Image previewImage;
 
     [SerializeField]
     private UI RE;
+
+    public GameObject buildOptions;
 
 
 
@@ -39,6 +43,7 @@ public class placementsystem : MonoBehaviour
         floorData = new();
         PropData = new();
         PreviewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
+        buildOptions.SetActive(false);
         
     }
 
@@ -54,6 +59,11 @@ public class placementsystem : MonoBehaviour
         BO.Onclicked += PlaceStructure;
         BO.OnExit += StopPlacement;
         RE.OpenClosePanel();
+
+        previewImage.color = new Color(1f, 1f, 1f, 1f);
+        previewImage.sprite = database.objectsData[selectedObjectIndex].itemImage;
+
+        buildOptions.SetActive(true);
     }
 
     private void PlaceStructure()
@@ -98,6 +108,10 @@ public class placementsystem : MonoBehaviour
         cellIndicator.SetActive(false);
         BO.Onclicked -= PlaceStructure;
         BO.OnExit -= StopPlacement;
+
+        previewImage.color = new Color(1f, 1f, 1f, 0f);
+
+        buildOptions.SetActive(false);
     }
 
     private void Update()
@@ -117,6 +131,6 @@ public class placementsystem : MonoBehaviour
         cellIndicator.transform.position = grid.CellToWorld(gridPostion);
     }
 
-
+    
 
 }

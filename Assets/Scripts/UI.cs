@@ -11,6 +11,8 @@ public class UI : MonoBehaviour
     private string timeOfDay = "Day";
     public GameObject timeButton;
     public TextMeshProUGUI timeButtonText;
+    [SerializeField]
+    
 
     public void OpenClosePanel()
     {
@@ -64,5 +66,6 @@ public class UI : MonoBehaviour
             timeButtonText.text = "DAYTIME";
         }
     }
+
 }
 
