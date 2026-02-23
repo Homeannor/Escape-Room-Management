@@ -61,7 +61,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Horror_Chest
     <ID>k__BackingField: 10
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 8115912078846750115, guid: 97684346a678209418549b8627dfb20b, type: 3}
+    <PreFab>k__BackingField: {fileID: 6447911746370926466, guid: 00be2eafe94830243bb5ac27376d6511, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 4cffd26f131a6bc4a8ce791002af43c7, type: 3}
   - <Name>k__BackingField: Temple_Wall
     <ID>k__BackingField: 11
@@ -76,7 +76,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Temple_Key
     <ID>k__BackingField: 13
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 4987215074321581539, guid: caad66cb26b9a9d4a9b26d98920f3b86, type: 3}
+    <PreFab>k__BackingField: {fileID: 2085641618825962495, guid: b8c2bb317cd12054bbee34f46f2dc760, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: da82e6e90bfe50e45939069086162180, type: 3}
   - <Name>k__BackingField: Temple_Tomb
     <ID>k__BackingField: 14
@@ -85,8 +85,8 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: 31782e6312bdc8041b89a914562395e9, type: 3}
   - <Name>k__BackingField: Temple_Table
     <ID>k__BackingField: 15
-    <Size>k__BackingField: {x: 2, y: 1}
-    <PreFab>k__BackingField: {fileID: 919132149155446097, guid: b0da0a610eb9c214c9c45d1752b18339, type: 3}
+    <Size>k__BackingField: {x: 2, y: 2}
+    <PreFab>k__BackingField: {fileID: 4200847005074858593, guid: f30f15735f4d36e46928463ad1ac69be, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 39be8768511a684498321dafb2d8d54e, type: 3}
   - <Name>k__BackingField: Candle
     <ID>k__BackingField: 16
@@ -110,12 +110,12 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 0}
   - <Name>k__BackingField: Wooden_Shelves
     <ID>k__BackingField: 19
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 1}
     <PreFab>k__BackingField: {fileID: 994021676201535376, guid: 427c0e77acf833f4280a8f49e3641de1, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 9ebaa986ad21d324297f126a31d346ce, type: 3}
   - <Name>k__BackingField: Wooden_Drawers
     <ID>k__BackingField: 20
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 1}
     <PreFab>k__BackingField: {fileID: 1662941798960071790, guid: 603b8b769075ff343aa0c111505afaab, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: e4acb447b814f6640a9b242436221556, type: 3}
   - <Name>k__BackingField: Horror_Cage
@@ -130,11 +130,11 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: a9aa78b525444c44cb64d41bd9315095, type: 3}
   - <Name>k__BackingField: Temple_Chair
     <ID>k__BackingField: 23
-    <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 919132149155446097, guid: 745844b2b7cb7084a96f96efa3decae0, type: 3}
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 1942140323230037643, guid: 09bccac122fd35e48bfd76a8b1e2b0f5, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: fc681f25c5d80074687528ffff2ff7be, type: 3}
   - <Name>k__BackingField: Temple_Torch
     <ID>k__BackingField: 24
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 919132149155446097, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+    <PreFab>k__BackingField: {fileID: 863437123493481939, guid: e9fe42a081c03fc45b78bb9e02f42f79, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: d653dbef385e04d459ac948e76dde1d2, type: 3}
