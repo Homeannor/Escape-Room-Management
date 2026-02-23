@@ -66,12 +66,12 @@ MonoBehaviour:
   - <Name>k__BackingField: Temple_Wall
     <ID>k__BackingField: 11
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 1955035972919203725, guid: 7cc918506ff8a804888f6d73e4cffa2f, type: 3}
+    <PreFab>k__BackingField: {fileID: 1629150694290636547, guid: 74f73a4829852b143a3e3fe58e065233, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 58ba1b70cfe0e8846b5a162f2d7a8aad, type: 3}
   - <Name>k__BackingField: Temple_Door
     <ID>k__BackingField: 12
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 5705365216506790509, guid: e97ac7bde9ba55e49926d850b8f7ad2a, type: 3}
+    <PreFab>k__BackingField: {fileID: 588532498228325108, guid: 9aeacc05b0a95d640945c1d61e02a4cd, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 143679e2948907845a014a477379df23, type: 3}
   - <Name>k__BackingField: Temple_Key
     <ID>k__BackingField: 13
@@ -120,13 +120,13 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: e4acb447b814f6640a9b242436221556, type: 3}
   - <Name>k__BackingField: Horror_Cage
     <ID>k__BackingField: 21
-    <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 919132149155446097, guid: 3c8d4a1e4dfbd7d469ea98f1797bb969, type: 3}
+    <Size>k__BackingField: {x: 2, y: 2}
+    <PreFab>k__BackingField: {fileID: 8411436969288115799, guid: 02d28d7ef29f16b44a64d296f153462d, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: 078edae479688544d89c1eabed2508a3, type: 3}
   - <Name>k__BackingField: Horror_Chain
     <ID>k__BackingField: 22
     <Size>k__BackingField: {x: 1, y: 1}
-    <PreFab>k__BackingField: {fileID: 919132149155446097, guid: cf00b9b3fd842384997a502d9a5b0ffc, type: 3}
+    <PreFab>k__BackingField: {fileID: 7094852854350310181, guid: 5ba175b507ea4ec48b43c263ee71be14, type: 3}
     <itemImage>k__BackingField: {fileID: 21300000, guid: a9aa78b525444c44cb64d41bd9315095, type: 3}
   - <Name>k__BackingField: Temple_Chair
     <ID>k__BackingField: 23
