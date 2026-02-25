@@ -1,4 +1,7 @@
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UIElements;
 
 public class PreviewSystem : MonoBehaviour
 {
@@ -14,6 +17,8 @@ public class PreviewSystem : MonoBehaviour
     private Material previewMaterialInstance;
 
     private Renderer cellIndicatorRenderer;
+    [SerializeField]
+    private placementsystem PS;
 
 
     private void Start()
@@ -69,7 +74,7 @@ public class PreviewSystem : MonoBehaviour
         MovePreview(position);
         MoveCursor(position);
         ApplyFeedback(validity);
-
+        RotatePreview();
     }
 
     private void ApplyFeedback(bool validity)
@@ -88,6 +93,28 @@ public class PreviewSystem : MonoBehaviour
     private void MovePreview(Vector3 position)
     {
         previewObject.transform.position = new Vector3(position.x, position.y + previewYOffset, position.z);
+        
+    }
+
+    private void RotatePreview()
+    {
+        GameObject rotatePoint = previewObject.transform.GetChild(0).gameObject;
+        if (PS.Angle == 0)
+        {
+            rotatePoint.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (PS.Angle == 1)
+        {
+            rotatePoint.transform.eulerAngles = new Vector3(0, 90, 0);
+        }
+        else if (PS.Angle == 2)
+        {
+            rotatePoint.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (PS.Angle == 3)
+        {
+            rotatePoint.transform.eulerAngles = new Vector3(0, 270, 0);
+        }
     }
 
 }

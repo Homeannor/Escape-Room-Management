@@ -33,4 +33,11 @@ public record ObjectData(string Name, int ID, GameObject PreFab)
 
     public Sprite itemImage { get; private set; }
 
+    [field: SerializeField]
+
+    public bool IsFloor { get; private set; }
+
+    [field: SerializeField]
+
+    public bool IsWall { get; private set; }
 }
