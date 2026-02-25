@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class placementsystem : MonoBehaviour
 {
     [SerializeField]   
-    private GameObject mouseIndicator, cellIndicator;
+    private GameObject mouseIndicator;
     [SerializeField]
     private BuildingOverhaul BO;
     [SerializeField]
@@ -25,8 +25,6 @@ public class placementsystem : MonoBehaviour
 
     private GridData floorData, PropData;
 
-    private Renderer PreviewRenderer;
-
     private List <GameObject> PlacedGameObjects = new();
     [SerializeField] private Image previewImage;
 
@@ -35,27 +33,29 @@ public class placementsystem : MonoBehaviour
 
     public GameObject buildOptions;
 
+    [SerializeField]
+    private PreviewSystem preview;
 
-
+    private Vector3Int lastDetectedPosition = Vector3Int.zero;
     private void Start()
     {
         StopPlacement();
         floorData = new();
         PropData = new();
-        PreviewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
         buildOptions.SetActive(false);
         
     }
 
     public void StartPlacement(int ID)
     {
+        StopPlacement();
         selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
         if (selectedObjectIndex < 0)
         {
            Debug.Log("object with ID " + ID + " not found in database");
         }
         gridVisual.SetActive(true);
-        cellIndicator.SetActive(true);
+        preview.StartingShowingPlacementPreview(database.objectsData[selectedObjectIndex].PreFab, database.objectsData[selectedObjectIndex].Size);
         BO.Onclicked += PlaceStructure;
         BO.OnExit += StopPlacement;
         RE.OpenClosePanel();
@@ -78,10 +78,10 @@ public class placementsystem : MonoBehaviour
         bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
         if(placementVaild == false)
         {
-            PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
+            //play auido here for not vaild
             return;
         }
-        //play auido here
+        //play auido here for vaild
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab);
         newObject.transform.position = grid.CellToWorld(gridPostion);
        
@@ -89,8 +89,8 @@ public class placementsystem : MonoBehaviour
         GridData selectedData = database.objectsData[selectedObjectIndex].ID == 0 ?
            floorData : PropData;
         selectedData.AddObjectAt(gridPostion, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, PlacedGameObjects.Count - 1);
-
-    }
+        preview.UpdatePosition(grid.CellToWorld(gridPostion), false);
+;    }
 
     private bool CheckPlacementVaild(Vector3Int gridPosition, int objectIndex)
     {
@@ -105,9 +105,12 @@ public class placementsystem : MonoBehaviour
     {
         selectedObjectIndex = -1;
         gridVisual.SetActive(false);
-        cellIndicator.SetActive(false);
+        preview.StopShowingPreview();
         BO.Onclicked -= PlaceStructure;
         BO.OnExit -= StopPlacement;
+        lastDetectedPosition = Vector3Int.zero;
+
+
 
         previewImage.color = new Color(1f, 1f, 1f, 0f);
 
@@ -123,12 +126,15 @@ public class placementsystem : MonoBehaviour
 
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
+        if (lastDetectedPosition != gridPostion)
+        {
+            bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
 
-        bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
-        PreviewRenderer.material.color = placementVaild ? Color.white : Color.red;
+            mouseIndicator.transform.position = mousePostion;
+            preview.UpdatePosition(grid.CellToWorld(gridPostion), placementVaild);
+            lastDetectedPosition = gridPostion;
+        }
        
-        mouseIndicator.transform.position = mousePostion;
-        cellIndicator.transform.position = grid.CellToWorld(gridPostion);
     }
 
     
