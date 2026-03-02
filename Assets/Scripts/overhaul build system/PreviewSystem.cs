@@ -98,22 +98,22 @@ public class PreviewSystem : MonoBehaviour
 
     private void RotatePreview()
     {
-        GameObject rotatePoint = previewObject.transform.GetChild(0).gameObject;
+        GameObject rotate = previewObject.transform.GetChild(0).gameObject;
         if (PS.Angle == 0)
         {
-            rotatePoint.transform.eulerAngles = new Vector3(0, 0, 0);
+            rotate.transform.rotation *= PS.offset1;
         }
         else if (PS.Angle == 1)
         {
-            rotatePoint.transform.eulerAngles = new Vector3(0, 90, 0);
+            rotate.transform.rotation *= PS.offset2;
         }
         else if (PS.Angle == 2)
         {
-            rotatePoint.transform.eulerAngles = new Vector3(0, 180, 0);
+            rotate.transform.rotation *= PS.offset3;
         }
         else if (PS.Angle == 3)
         {
-            rotatePoint.transform.eulerAngles = new Vector3(0, 270, 0);
+            rotate.transform.rotation *= PS.offset4;
         }
     }
 
