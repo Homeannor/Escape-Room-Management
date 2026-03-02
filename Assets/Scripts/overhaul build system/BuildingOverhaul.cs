@@ -16,7 +16,9 @@ public class BuildingOverhaul : MonoBehaviour
     [SerializeField]
     private LayerMask placementLayermask;
 
-    public event Action Onclicked, OnExit;
+    public event Action Onclicked, OnExit, Rotation;
+
+    
 
     private void Update()
     {
@@ -28,6 +30,20 @@ public class BuildingOverhaul : MonoBehaviour
         {
             OnExit?.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Rotation?.Invoke();
+        }
+    }
+
+    public void cancelButton()
+    {
+        OnExit?.Invoke();
+    }
+
+    public void RotateButton()
+    {
+        Rotation?.Invoke();
     }
 
 

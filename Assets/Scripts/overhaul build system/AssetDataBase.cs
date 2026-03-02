@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 [CreateAssetMenu(fileName = "AssetDataBase", menuName = "Scriptable Objects/AssetDataBase")]
@@ -28,4 +29,15 @@ public record ObjectData(string Name, int ID, GameObject PreFab)
 
     public GameObject PreFab { get; private set; }
 
+    [field: SerializeField]
+
+    public Sprite itemImage { get; private set; }
+
+    [field: SerializeField]
+
+    public bool IsFloor { get; private set; }
+
+    [field: SerializeField]
+
+    public bool IsWall { get; private set; }
 }

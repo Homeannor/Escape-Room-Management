@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea2ed11af2efdb4f8ac69b130f97177, type: 3}
+  m_Name: AssetDataBase
+  m_EditorClassIdentifier: 
+  objectsData:
+  - <Name>k__BackingField: Wooden_Wall
+    <ID>k__BackingField: 1
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 20348307343381622, guid: ee2fe4978dda6d349b5ea3ae027d94bd, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: c2e0f865cd42a854c9eb13e7142f725b, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Wooden_Door
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 673511324929110626, guid: 5f48b9f4788bdf245b1090d19ec87e28, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 1f6d967f34a8f3e43b14866da4bd7f2a, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Wooden_Key
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4492995744612523595, guid: f80da3efc93877e4aadcd7aa949328bf, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 1ee4e54ffaafc0c44a9928be95a13a76, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Chair
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 1874743025950594703, guid: d598bae8f174cc741bc9467dae60fe3c, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 2af05b486c01452478510ff0d6cd3230, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Table
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 3149790938703417877, guid: 570b7d7cac703ba4d8cc54dfdf6672ab, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 7ccc44d027065ec46bde2c2cd62c4c8f, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Wall
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 953974660042099558, guid: 5e189d2d4c6e7584c95535cd00f1e048, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 0b598eb7e985933488e56a2f594276e8, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Horror_Door
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 6318736979838237095, guid: 436776b91df560c46a873511916e3213, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 1070bf944adf09147b29085adffc8a43, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Horror_Key
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4344216563262252920, guid: 3d32698cbb5fbc84a8c3b6c7d9f41b66, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 82a4dac202d0d1645a678cd584e033b8, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_ChairCuffed
+    <ID>k__BackingField: 9
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 3579884295371044580, guid: 9d60b0ca9e5bc484a9321bd424f71a36, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 7d119df51266c1c48a654a32a4553e3b, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Chest
+    <ID>k__BackingField: 10
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 6447911746370926466, guid: 00be2eafe94830243bb5ac27376d6511, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 4cffd26f131a6bc4a8ce791002af43c7, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Temple_Wall
+    <ID>k__BackingField: 11
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 1629150694290636547, guid: 74f73a4829852b143a3e3fe58e065233, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 58ba1b70cfe0e8846b5a162f2d7a8aad, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Temple_Door
+    <ID>k__BackingField: 12
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 588532498228325108, guid: 9aeacc05b0a95d640945c1d61e02a4cd, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 143679e2948907845a014a477379df23, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 1
+  - <Name>k__BackingField: Temple_Key
+    <ID>k__BackingField: 13
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 2085641618825962495, guid: b8c2bb317cd12054bbee34f46f2dc760, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: da82e6e90bfe50e45939069086162180, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Temple_Tomb
+    <ID>k__BackingField: 14
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 2473169762279563264, guid: cab7fe567c8847b45a22ad58580904c0, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 31782e6312bdc8041b89a914562395e9, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Temple_Table
+    <ID>k__BackingField: 15
+    <Size>k__BackingField: {x: 2, y: 2}
+    <PreFab>k__BackingField: {fileID: 4200847005074858593, guid: f30f15735f4d36e46928463ad1ac69be, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 39be8768511a684498321dafb2d8d54e, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Candle
+    <ID>k__BackingField: 16
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 6334871544870252288, guid: ca9dfb9408e515847bfcec50cf7b143c, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: d1ca4529aceed1743b5fe64d268d38e2, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Candle_Tall
+    <ID>k__BackingField: 17
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 8578383113383162733, guid: cc8c3fb9897828444bf90fc2de51a0ed, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 04b9c053a340924418d16405bc94fa64, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Cobweb
+    <ID>k__BackingField: 18
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 3196595829711487305, guid: 380600f2412d6b646a5cf455fb73fb9f, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 128712c4ace4a204092a3a88dcf836c9, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: floor
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4482694676898014694, guid: 7c7a9f2da0318874882107f40629da56, type: 3}
+    <itemImage>k__BackingField: {fileID: 0}
+    <IsFloor>k__BackingField: 1
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Wooden_Shelves
+    <ID>k__BackingField: 19
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 994021676201535376, guid: 427c0e77acf833f4280a8f49e3641de1, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 9ebaa986ad21d324297f126a31d346ce, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Wooden_Drawers
+    <ID>k__BackingField: 20
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 1662941798960071790, guid: 603b8b769075ff343aa0c111505afaab, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: e4acb447b814f6640a9b242436221556, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Cage
+    <ID>k__BackingField: 21
+    <Size>k__BackingField: {x: 2, y: 2}
+    <PreFab>k__BackingField: {fileID: 8411436969288115799, guid: 02d28d7ef29f16b44a64d296f153462d, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 078edae479688544d89c1eabed2508a3, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Horror_Chain
+    <ID>k__BackingField: 22
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 7094852854350310181, guid: 5ba175b507ea4ec48b43c263ee71be14, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: a9aa78b525444c44cb64d41bd9315095, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Temple_Chair
+    <ID>k__BackingField: 23
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 1942140323230037643, guid: 09bccac122fd35e48bfd76a8b1e2b0f5, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: fc681f25c5d80074687528ffff2ff7be, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Temple_Torch
+    <ID>k__BackingField: 24
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 863437123493481939, guid: e9fe42a081c03fc45b78bb9e02f42f79, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: d653dbef385e04d459ac948e76dde1d2, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0

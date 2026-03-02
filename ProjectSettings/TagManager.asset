@@ -13,17 +13,17 @@ TagManager:
   - Customer
   - Key
   - BuildOptions
+  - Rotation
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
   - NavMesh
-  - placement area
   - Water
+  - UI
   - UI
   - ground
   - prop
-  - 
   - 
   - 
   - 
