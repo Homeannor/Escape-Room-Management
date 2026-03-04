@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         cashText.text = "CASH: " + cash;
         dayText.text = "DAY " + days;
         timeText.text = FormatTime();
+        // Debug.Log(timeText.text);
     }
 
     //Temporary method to add cash for testing

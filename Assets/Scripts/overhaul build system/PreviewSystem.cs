@@ -74,7 +74,7 @@ public class PreviewSystem : MonoBehaviour
         MovePreview(position);
         MoveCursor(position);
         ApplyFeedback(validity);
-        RotatePreview();
+        RotatePreview(position);
     }
 
     private void ApplyFeedback(bool validity)
@@ -96,24 +96,24 @@ public class PreviewSystem : MonoBehaviour
         
     }
 
-    private void RotatePreview()
+    private void RotatePreview(Vector3 position)
     {
-        GameObject rotate = previewObject.transform.GetChild(0).gameObject;
+        
         if (PS.Angle == 0)
         {
-            rotate.transform.rotation *= PS.offset1;
+            previewObject.transform.rotation = Quaternion.Euler(0,90,0);
         }
         else if (PS.Angle == 1)
         {
-            rotate.transform.rotation *= PS.offset2;
+            previewObject.transform.rotation = PS.offset1;
         }
         else if (PS.Angle == 2)
         {
-            rotate.transform.rotation *= PS.offset3;
+            previewObject.transform.rotation = PS.offset1;
         }
         else if (PS.Angle == 3)
         {
-            rotate.transform.rotation *= PS.offset4;
+            previewObject.transform.rotation = PS.offset1;
         }
     }
 

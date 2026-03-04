@@ -188,3 +188,31 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: d653dbef385e04d459ac948e76dde1d2, type: 3}
     <IsFloor>k__BackingField: 0
     <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Computer
+    <ID>k__BackingField: 25
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 1419011246710289368, guid: d48c5c56cc59a134eb21804d0c911956, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: e14a4a5645fcfa147b7557db08b5a27c, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Desk_Photo
+    <ID>k__BackingField: 26
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 1854869686130776607, guid: 0ca4553b76f6f2d4f996abedb32d60f0, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 4128f1cebb4a80547bc04d233711ce21, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Mug
+    <ID>k__BackingField: 27
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 4393849826159319780, guid: 4d32d979a732c9f4d915bfc6a756bc7a, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 35c2d0f3cdec08745b381ff54c090441, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Sofa
+    <ID>k__BackingField: 28
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 5812217278694206693, guid: fafd340746637eb43a29d2ebbf6fe607, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 6b88c6a5a7b91804f96f0e41da499fff, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
