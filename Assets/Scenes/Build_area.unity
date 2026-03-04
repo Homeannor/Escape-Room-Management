@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMoveSpeed: 10
   rotationSpeed: 100
+  ScrollSpeed: 10
   topDownCamera: {fileID: 1434225256}
   isometricCamera: {fileID: 1503588035}
 --- !u!1001 &58349573
@@ -52462,7 +52463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0066350703, y: 0.93500006}
   m_AnchorMax: {x: 0.136, y: 0.98800004}
-  m_AnchoredPosition: {x: 174.65405, y: -980.4}
+  m_AnchoredPosition: {x: 174.65405, y: -944.3}
   m_SizeDelta: {x: 314.3082, y: 109.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112019781
@@ -52489,7 +52490,10 @@ MonoBehaviour:
 
     Q & E - Rotate Camera
 
-    SHIFT - 2X Camera Speed'
+    SHIFT - 2X Camera Speed
+
+    MOUSE
+    WHEEL - Zoom'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
