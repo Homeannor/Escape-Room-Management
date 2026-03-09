@@ -5,14 +5,20 @@ using System.Numerics;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement instance;
     public float startMoveSpeed = 30f;
     private float moveSpeed;
     public float rotationSpeed = 50f;
-    public float ScrollSpeed = 20f;
+    public float ScrollSpeed;
+    public bool panelOpen;
 
     public Camera topDownCamera;
     public Camera isometricCamera;
 
+    private void Start()
+    {
+        instance = this;
+    }
     void Update()
     {
         /*Debug.Log("Speed: " + moveSpeed);
@@ -99,6 +105,15 @@ public class CameraMovement : MonoBehaviour
         {
             topDownCamera.fieldOfView = 100;
             isometricCamera.fieldOfView = 100;
+        }
+
+        if (panelOpen == true)
+        {
+            ScrollSpeed = 0f;
+        }
+        else
+        {
+            ScrollSpeed = 20f;
         }
 
     }
