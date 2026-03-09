@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193392232744628377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604617667305860963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,6 +131,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cf00b9b3fd842384997a502d9a5b0ffc, type: 3}
       propertyPath: m_Name
       value: Chain (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf00b9b3fd842384997a502d9a5b0ffc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

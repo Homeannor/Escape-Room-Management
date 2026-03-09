@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6760426166988792345}
-  m_Layer: 0
+  - component: {fileID: 2670107789820000478}
+  - component: {fileID: 2533133678986264964}
+  m_Layer: 7
   m_Name: Temple TOMB OF SANS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,43 @@ Transform:
   - {fileID: 8925044256164552574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2670107789820000478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473169762279563264}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 1, z: 1.5}
+  m_Center: {x: 1, y: 0.5, z: 0.5}
+--- !u!114 &2533133678986264964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473169762279563264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c835b1c6cc014478b197279b02929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successRate: 60
+  openPrefab: {fileID: 2068547041086742886}
+  closedPrefab: {fileID: 4454895791960774040}
+  needsKey: 0
 --- !u!1 &3080723023765615765
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +80,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8925044256164552574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,13 +180,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.7431
       objectReference: {fileID: 0}
+    - target: {fileID: -6899930024675278613, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -680183025995506541, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
       propertyPath: m_Name
       value: Temple Tomb open with skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990304310274642947, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7735258878390748736, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
       propertyPath: m_LocalPosition.y
@@ -173,6 +228,11 @@ PrefabInstance:
 --- !u!4 &1729140637545626588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
+  m_PrefabInstance: {fileID: 1186026987519745079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068547041086742886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c3d9bfae712545e4da2850ffcceb4d60, type: 3}
   m_PrefabInstance: {fileID: 1186026987519745079}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3536330451788064969
@@ -244,6 +304,10 @@ PrefabInstance:
       value: Temple Tomb closed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4e270a5460f6e6340a3a854fd2e9eeba, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4e270a5460f6e6340a3a854fd2e9eeba, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -255,5 +319,10 @@ PrefabInstance:
 --- !u!4 &3934220495486193442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e270a5460f6e6340a3a854fd2e9eeba, type: 3}
+  m_PrefabInstance: {fileID: 3536330451788064969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4454895791960774040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e270a5460f6e6340a3a854fd2e9eeba, type: 3}
   m_PrefabInstance: {fileID: 3536330451788064969}
   m_PrefabAsset: {fileID: 0}

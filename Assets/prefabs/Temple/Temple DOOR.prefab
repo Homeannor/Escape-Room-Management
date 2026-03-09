@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1544328165727866007}
-  m_Layer: 0
+  - component: {fileID: 881488824110092215}
+  - component: {fileID: 8378469358754250470}
+  m_Layer: 7
   m_Name: Temple DOOR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,43 @@ Transform:
   - {fileID: 6232930817328665812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &881488824110092215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588532498228325108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.5602226, z: 1.1885033}
+  m_Center: {x: 0.5, y: 0.7801113, z: -0.5}
+--- !u!114 &8378469358754250470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588532498228325108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c835b1c6cc014478b197279b02929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successRate: 75
+  openPrefab: {fileID: 6786616434352980993}
+  closedPrefab: {fileID: 364880530811923525}
+  needsKey: 1
 --- !u!1 &6786616434352980993
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +82,7 @@ GameObject:
   - component: {fileID: 273927967425664075}
   - component: {fileID: 7688153943876270197}
   - component: {fileID: 6196162081657176267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Open Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6232930817328665812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,6 +258,10 @@ PrefabInstance:
       value: Closed Door
       objectReference: {fileID: 0}
     - target: {fileID: -8068073526183931155, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -230,9 +273,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -964008187524937182, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
       propertyPath: m_Name
       value: Templedoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001247641106111415, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3881100845101776950, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
       propertyPath: m_LocalPosition.x
@@ -262,6 +317,11 @@ PrefabInstance:
       addedObject: {fileID: 273927967425664075}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+--- !u!1 &364880530811923525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8068073526183931155, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}
+  m_PrefabInstance: {fileID: 1520001394387648168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1338299484960954691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b72f9e0572b172b46ad3f6a74fa5e527, type: 3}

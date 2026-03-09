@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4319877758109498592}
   - component: {fileID: 3269967752375066308}
   - component: {fileID: 2509010194922487548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8072193343364941830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411171550649357709}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mug Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5608743328813977569}
   - component: {fileID: 844076962313323610}
   - component: {fileID: 1368521783165866358}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5193468283730014589}
-  m_Layer: 0
+  - component: {fileID: 359801340643955274}
+  m_Layer: 7
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +119,27 @@ Transform:
   - {fileID: 5103424996050569404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &359801340643955274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662941798960071790}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 1, y: 0.5, z: 0.5}
 --- !u!1 &2119818959528460287
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +151,7 @@ GameObject:
   - component: {fileID: 4318441757480824335}
   - component: {fileID: 4365614029215886782}
   - component: {fileID: 1694603500241756110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Top Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +237,7 @@ GameObject:
   - component: {fileID: 4007425574309175297}
   - component: {fileID: 3111641722131085819}
   - component: {fileID: 2686886949558129265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +323,7 @@ GameObject:
   - component: {fileID: 8678353162297625021}
   - component: {fileID: 8959155215818713264}
   - component: {fileID: 8880497248202067273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103424996050569404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +441,7 @@ GameObject:
   - component: {fileID: 2703242928777487115}
   - component: {fileID: 5178756214338556940}
   - component: {fileID: 1013143400053281916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 974348363800023668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: drawers master
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5974519975401567760}
-  m_Layer: 0
+  - component: {fileID: -3529819982606651208}
+  - component: {fileID: 8210043049053766627}
+  m_Layer: 7
   m_Name: Selves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,41 @@ Transform:
   - {fileID: 2189191657101829252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-3529819982606651208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994021676201535376}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.5, z: 1}
+  m_Center: {x: 1, y: 0.6718617, z: 0.5}
+--- !u!114 &8210043049053766627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994021676201535376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd544b5cc8315a48a34695edf38944d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alreadyLooked: 0
+  successRate: 25
 --- !u!1 &3719923960770894246
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +80,7 @@ GameObject:
   - component: {fileID: 4454548322291872773}
   - component: {fileID: 6651592094930528834}
   - component: {fileID: 8764064297064219110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +166,7 @@ GameObject:
   - component: {fileID: 5773585980602692424}
   - component: {fileID: 5994590249696046837}
   - component: {fileID: 7510054506381216116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2189191657101829252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2911775479104137194}
   - component: {fileID: 7308888726623758629}
   - component: {fileID: 8098515115686200262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FlamesParticleEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4660,7 +4660,7 @@ GameObject:
   - component: {fileID: 8056206032391387502}
   - component: {fileID: 2624335952969355176}
   - component: {fileID: 2083575529249887581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9563,7 +9563,7 @@ GameObject:
   - component: {fileID: 4712122409614568452}
   - component: {fileID: 8304410894294574953}
   - component: {fileID: 5250703379780448308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14316,7 +14316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373098525563949411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14349,7 +14349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4291195235302471904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14435,6 +14435,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e8e75b59bfcba5745a2eda504a85d482, type: 3}
       propertyPath: m_Name
       value: Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8e75b59bfcba5745a2eda504a85d482, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

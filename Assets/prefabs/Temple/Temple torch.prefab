@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736073398655085446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068404523593737691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Temple torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 5701122039011591114}
   - component: {fileID: 3364073681393551908}
   - component: {fileID: 3833860050286243736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4841,7 @@ GameObject:
   - component: {fileID: 3479974884349656272}
   - component: {fileID: 199576090712357425}
   - component: {fileID: 4784558939364694049}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9596,7 +9596,7 @@ GameObject:
   - component: {fileID: 4983775833188399397}
   - component: {fileID: 3979476733938633980}
   - component: {fileID: 6095084250630408883}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14572,6 +14572,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4892537110357991732, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4193435509102225134, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3967884302456686066, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -3107470296984639959, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14587,6 +14599,10 @@ PrefabInstance:
     - target: {fileID: -1963748984701684442, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -591969551528563446, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -174342358114908358, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -14595,6 +14611,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
       propertyPath: m_Name
       value: temple torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227827199812104024, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919523103516586475, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049823086242842778, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5122423641951633772, guid: 1e34cf716a7a68e47a11631dbf37c94f, type: 3}
       propertyPath: m_LocalPosition.x

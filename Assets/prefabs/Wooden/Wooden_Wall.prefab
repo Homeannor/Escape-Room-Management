@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2525764022171364513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wooden_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4787031737975879936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,9 +184,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 102107316926930387, guid: 280b1e9a75a62b54fb45b31e0cb89ec4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 280b1e9a75a62b54fb45b31e0cb89ec4, type: 3}
       propertyPath: m_Name
       value: Wooden Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 280b1e9a75a62b54fb45b31e0cb89ec4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669003961842460938, guid: 280b1e9a75a62b54fb45b31e0cb89ec4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

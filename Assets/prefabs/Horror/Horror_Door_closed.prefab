@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3752323658574285241}
   - component: {fileID: 5017414276605774971}
   - component: {fileID: 2543956583825061465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door Frame Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 178740638998098028}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000030908623, y: 0.7071068, z: 0.7071067, w: 0.000000030908616}
-  m_LocalPosition: {x: -0.10077178, y: 0, z: -0.020017324}
+  m_LocalPosition: {x: -0.101, y: -0.12, z: -0.02}
   m_LocalScale: {x: -45.236393, y: -117.01651, z: -178.49568}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4033018342222478896}
   - component: {fileID: 8288248032381901949}
   - component: {fileID: 5961655998498112850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 540740598356304336}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000030908623, y: 0.7071068, z: 0.7071067, w: 0.000000030908616}
-  m_LocalPosition: {x: 0.0039753127, y: 0, z: -0.020017324}
+  m_LocalPosition: {x: 0.004, y: -0.12, z: -0.02}
   m_LocalScale: {x: -45.236393, y: -117.01651, z: -178.49568}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2914891940694255599}
   - component: {fileID: 8625154010058198245}
   - component: {fileID: 8105818540437975931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 6661456927044565727}
   - component: {fileID: 9030122274621031839}
   - component: {fileID: 8406641869480358586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 2300133805890070464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4999978, y: 0.50000226, z: 0.50000226, w: -0.4999978}
-  m_LocalPosition: {x: -1.032, y: 0.022, z: 0.732}
+  m_LocalPosition: {x: -1.032, y: -0.1, z: 0.732}
   m_LocalScale: {x: -28.92023, y: -116.687004, z: -178.49565}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3770186585347386850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,9 +375,9 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4033018342222478896}
+  - {fileID: 6661456927044565727}
   - {fileID: 3752323658574285241}
   - {fileID: 2914891940694255599}
-  - {fileID: 6661456927044565727}
   m_Father: {fileID: 7188840721915475882}
   m_LocalEulerAnglesHint: {x: 0, y: -269.999, z: 0}
 --- !u!1 &2851799157293698216
@@ -389,7 +389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7188840721915475882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rotate point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3829782263450797926}
-  m_Layer: 0
+  - component: {fileID: 8733498771363589250}
+  - component: {fileID: 6110366633033641973}
+  m_Layer: 7
   m_Name: Horror_Door_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,3 +446,40 @@ Transform:
   - {fileID: 7188840721915475882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8733498771363589250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318736979838237095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c835b1c6cc014478b197279b02929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successRate: 80
+  openPrefab: {fileID: 2300133805890070464}
+  closedPrefab: {fileID: 540740598356304336}
+  needsKey: 1
+--- !u!65 &6110366633033641973
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318736979838237095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.7394477, z: 2}
+  m_Center: {x: 0.5, y: 0.86972386, z: 0}
