@@ -45,6 +45,15 @@ public class placementsystem : MonoBehaviour
     public Quaternion offset2;
     public Quaternion offset3;
     public Quaternion offset4;
+
+    public bool HasMoved;
+    public bool OffTile;
+
+    public float startx;
+    public float starty;
+    public float startz;
+
+
     private void Start()
     {
         StopPlacement();
@@ -96,21 +105,47 @@ public class placementsystem : MonoBehaviour
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab);
         newObject.transform.position = grid.CellToWorld(gridPostion);
         GameObject rotatePoint = newObject.transform.GetChild(0).gameObject;
+     
         if (Angle == 0 )
         {
             rotatePoint.transform.rotation *= offset1;
+            if (HasMoved == true)
+            {
+                
+                rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz);
+
+            }
         }
         else if (Angle == 1)
         {
             rotatePoint.transform.rotation *= offset2;
+            if (HasMoved == true)
+            {
+               
+                rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz +1);
+                
+            }
+           
         }
         else if (Angle == 2)
         {
             rotatePoint.transform.rotation *= offset3;
+            if (HasMoved == true)
+            {
+               
+                rotatePoint.transform.position = new Vector3(preview.startx + 1, preview.starty, preview.startz);
+
+            }
         }
         else if (Angle == 3)
         {
             rotatePoint.transform.rotation *= offset4;
+            if (HasMoved == true)
+            {
+               
+                rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz);
+
+            }
         }
 
 
@@ -164,9 +199,9 @@ public class placementsystem : MonoBehaviour
         {
             return;
         }
-
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
+        preview.RotatePreview(gridPostion);
         if (lastDetectedPosition != gridPostion)
         {
             bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
@@ -174,6 +209,8 @@ public class placementsystem : MonoBehaviour
             mouseIndicator.transform.position = mousePostion;
             preview.UpdatePosition(grid.CellToWorld(gridPostion), placementVaild);
             lastDetectedPosition = gridPostion;
+            OffTile = true;
+            
         }
        
     }

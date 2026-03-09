@@ -13170,7 +13170,10 @@ MonoBehaviour:
   previewYOffset: 0.06
   cellIndicator: {fileID: 673347838}
   previewMaterialPrefab: {fileID: 2100000, guid: 83359daa29573e7428ec709ebda65bd3, type: 2}
-  PS: {fileID: 0}
+  PS: {fileID: 909587864}
+  startx: 0
+  starty: 0
+  startz: 0
 --- !u!1001 &547334829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22910,6 +22913,11 @@ MonoBehaviour:
   offset2: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   offset3: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   offset4: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
+  HasMoved: 1
+  OffTile: 1
+  startx: 2.38
+  starty: 0
+  startz: 0
 --- !u!1001 &916973823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36623,6 +36631,7 @@ MonoBehaviour:
   placementLayermask:
     serializedVersion: 2
     m_Bits: 8
+  PS: {fileID: 909587864}
 --- !u!4 &1525573929
 Transform:
   m_ObjectHideFlags: 0

@@ -21,6 +21,16 @@ public class PreviewSystem : MonoBehaviour
     private placementsystem PS;
 
 
+    
+    public float startx;
+    public float starty;
+    public float startz;
+
+    private bool OnlyOnce = true;
+
+
+
+
     private void Start()
     {
         previewMaterialInstance = new Material(previewMaterialPrefab);
@@ -34,6 +44,8 @@ public class PreviewSystem : MonoBehaviour
         PreparePreview(previewObject);
         PrepareCursor(size);
         cellIndicator.SetActive(true);
+       
+
     }
     
     private void PrepareCursor(Vector2Int size)
@@ -74,7 +86,7 @@ public class PreviewSystem : MonoBehaviour
         MovePreview(position);
         MoveCursor(position);
         ApplyFeedback(validity);
-        RotatePreview();
+        RotatePreview(position);
     }
 
     private void ApplyFeedback(bool validity)
@@ -94,26 +106,68 @@ public class PreviewSystem : MonoBehaviour
     {
         previewObject.transform.position = new Vector3(position.x, position.y + previewYOffset, position.z);
         
+
     }
 
-    private void RotatePreview()
+    public void RotatePreview(Vector3 position)
     {
-        GameObject rotate = previewObject.transform.GetChild(0).gameObject;
-        if (PS.Angle == 0)
+
+
+
+
+        GameObject rotatePoint = previewObject.transform.GetChild(0).gameObject;
+
+
+        if (PS.OffTile == false)
         {
-            rotate.transform.rotation *= PS.offset1;
+            if (PS.Angle == 0)
+            {
+                rotatePoint.transform.rotation = PS.offset1;
+                if (PS.HasMoved == true)
+                {
+                    rotatePoint.transform.position = new Vector3(startx, starty, startz );
+                    PS.HasMoved = false;
+
+                }
+            }
+            else if (PS.Angle == 1)
+            {
+                rotatePoint.transform.rotation = PS.offset2;
+                if (PS.HasMoved == true)
+                {
+                    rotatePoint.transform.position = new Vector3(startx, starty, startz + 1f);
+                    PS.HasMoved = false;
+
+                }
+            }
+            else if (PS.Angle == 2)
+            {
+                rotatePoint.transform.rotation = PS.offset3;
+                if (PS.HasMoved == true)
+                {
+                    rotatePoint.transform.position = new Vector3(startx + 1f, starty, startz);
+                    PS.HasMoved = false;
+
+                }
+            }
+            else if (PS.Angle == 3)
+            {
+                rotatePoint.transform.rotation = PS.offset4;
+                if (PS.HasMoved == true)
+                {
+                    rotatePoint.transform.position = new Vector3(startx, starty, startz );
+                    PS.HasMoved = false;
+
+                }
+            }
         }
-        else if (PS.Angle == 1)
+        if (PS.OffTile == true)
         {
-            rotate.transform.rotation *= PS.offset2;
-        }
-        else if (PS.Angle == 2)
-        {
-            rotate.transform.rotation *= PS.offset3;
-        }
-        else if (PS.Angle == 3)
-        {
-            rotate.transform.rotation *= PS.offset4;
+            startx = rotatePoint.transform.position.x;
+            starty = rotatePoint.transform.position.y;
+            startz = rotatePoint.transform.position.z;
+            PS.OffTile = false;
+            
         }
     }
 

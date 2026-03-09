@@ -18,7 +18,9 @@ public class BuildingOverhaul : MonoBehaviour
 
     public event Action Onclicked, OnExit, Rotation;
 
-    
+    [SerializeField]
+    private placementsystem PS;
+
 
     private void Update()
     {
@@ -33,6 +35,7 @@ public class BuildingOverhaul : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Rotation?.Invoke();
+            PS.HasMoved = true;
         }
     }
 
