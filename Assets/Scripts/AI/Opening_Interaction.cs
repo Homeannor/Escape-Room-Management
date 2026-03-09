@@ -18,7 +18,7 @@ public class Opening_Interaction : MonoBehaviour
         
         if (other.CompareTag("Customer"))
         {
-            Debug.Log("Interacting with" + gameObject.name);
+            //Debug.Log("Interacting with" + gameObject.name);
             other.GetComponent<AIMovement>().StopMoving();
             if (needsKey == true)
             {

@@ -11,6 +11,7 @@ public class Looking_Interaction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Interacting with" + gameObject.name);
         reactionTime = Random.Range(1, 10);
         randomNumber = Random.Range(1, 100);
         if (other.CompareTag("Customer"))
@@ -19,7 +20,6 @@ public class Looking_Interaction : MonoBehaviour
             {
                 if (alreadyLooked == false)
                 {
-                    Debug.Log("Interacting with" + gameObject.name);
                     other.GetComponent<AIMovement>().StopMoving();
                     other.GetComponent<AIMovement>().Invoke("StartMoving", reactionTime);
                     alreadyLooked = true;
