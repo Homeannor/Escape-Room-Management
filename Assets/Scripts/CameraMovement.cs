@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     public float startMoveSpeed = 30f;
     private float moveSpeed;
     public float rotationSpeed = 50f;
-    public float ScrollSpeed = 10f;
+    public float ScrollSpeed = 20f;
 
     public Camera topDownCamera;
     public Camera isometricCamera;
@@ -89,6 +89,18 @@ public class CameraMovement : MonoBehaviour
 
         isometricCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
         topDownCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
+
+        if (isometricCamera.fieldOfView < 30 || topDownCamera.fieldOfView < 30)
+        {
+            topDownCamera.fieldOfView = 30;
+            isometricCamera.fieldOfView = 30;
+        }
+        else if (isometricCamera.fieldOfView > 100 || topDownCamera.fieldOfView > 100)
+        {
+            topDownCamera.fieldOfView = 100;
+            isometricCamera.fieldOfView = 100;
+        }
+
     }
 }
  

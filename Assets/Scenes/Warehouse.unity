@@ -758,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMoveSpeed: 30
   rotationSpeed: 100
-  ScrollSpeed: 10
+  ScrollSpeed: 20
   topDownCamera: {fileID: 1434225256}
   isometricCamera: {fileID: 1503588035}
 --- !u!1001 &68223705

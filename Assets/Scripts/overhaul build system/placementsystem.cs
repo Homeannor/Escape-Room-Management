@@ -164,7 +164,7 @@ public class placementsystem : MonoBehaviour
         {
             return;
         }
-
+        preview.RotatePreview();
         Vector3 mousePostion = BO.GetSelectedMapPosition();
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
         if (lastDetectedPosition != gridPostion)
