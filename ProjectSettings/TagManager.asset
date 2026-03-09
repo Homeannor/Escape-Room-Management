@@ -7,11 +7,7 @@ TagManager:
   - PreviewImage
   - CancelButton
   - RotateButton
-  - Chest
-  - Tomb
-  - Door
   - Customer
-  - Key
   - BuildOptions
   - Rotation
   layers:
