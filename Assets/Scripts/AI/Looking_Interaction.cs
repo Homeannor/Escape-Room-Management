@@ -11,7 +11,7 @@ public class Looking_Interaction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Interacting with" + gameObject.name);
+        //Debug.Log("Interacting with" + gameObject.name);
         reactionTime = Random.Range(1, 10);
         randomNumber = Random.Range(1, 100);
         if (other.CompareTag("Customer"))

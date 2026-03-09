@@ -13462,13 +13462,14 @@ GameObject:
   - component: {fileID: 1434225256}
   - component: {fileID: 1434225255}
   - component: {fileID: 1434225254}
+  - component: {fileID: 1434225258}
   m_Layer: 0
   m_Name: TopDownCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1434225254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13520,7 +13521,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434225253}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &1434225256
 Camera:
   m_ObjectHideFlags: 0
@@ -13587,6 +13588,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 57424950}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!222 &1434225258
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434225253}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1443124881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20090,22 +20099,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3603516449468367415, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597315763638930669, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8091343592314020836}
-    - target: {fileID: 6597315763638930669, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuildNewRoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597315763638930669, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rooms, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 8785511560471335250, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
@@ -20146,34 +20139,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8958030854189852891, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8958030854189852891, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuildScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8958030854189852891, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
---- !u!114 &8091343592314020836 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6967407533517605953, guid: d570410e8bdab1b4d8aa26b8661c3fb3, type: 3}
-  m_PrefabInstance: {fileID: 8091343592314020835}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1429f64d536d7834d87320071e4659b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

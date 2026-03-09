@@ -8,7 +8,7 @@ public class Key_Interaction : MonoBehaviour
         reactionTime = Random.Range(1, 10); //waits for a random amount of time
         if (other.CompareTag("Customer"))
         {
-            Debug.Log("Interacting with" + gameObject.name);
+            //Debug.Log("Interacting with" + gameObject.name);
             other.GetComponent<AIMovement>().StopMoving();
             other.GetComponent<AIMovement>().hasKey = true;
             gameObject.SetActive(false);
