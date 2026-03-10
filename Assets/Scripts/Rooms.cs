@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,20 +8,22 @@ public class Rooms : MonoBehaviour
     public static Rooms Instance;
     public int roomCost = 500;
     public GameObject roomPrefab;
+    private bool hasChecked;
+    private bool hasSpawnedCustomers;
 
     [Header("Booleans for Button changes")]
     public bool boughtRoom;
     public bool isReady;
     public bool hasCustomers;
     public bool needsResetting;
-    public bool needsHint;
+    //public bool needsHint;
 
     [Header("Buttons")]
     public GameObject background;
     public GameObject newRoomButton;
     public GameObject editRoomButton;
     public GameObject resetRoomButton;
-    public GameObject hintButton;
+    //public GameObject hintButton;
 
     private void Start()
     {
@@ -29,12 +32,10 @@ public class Rooms : MonoBehaviour
         newRoomButton.SetActive(true);
         editRoomButton.SetActive(false);
         resetRoomButton.SetActive(false);
-        hintButton.SetActive(false);
         boughtRoom = false;
         isReady = false;
         hasCustomers = false;
         needsResetting = false;
-        needsHint = false;
 }
     void Update()
     {
@@ -46,18 +47,25 @@ public class Rooms : MonoBehaviour
         {
             newRoomButton.GetComponent<Button>().interactable = false;
         }
-        if (isReady == true)
-        {
-            SpawnCustomers();
-        }
         if (boughtRoom == true)
         {
-            background.SetActive(true);
-            newRoomButton.SetActive(false);
-            editRoomButton.SetActive(true);
-            resetRoomButton.SetActive(false);
-            hintButton.SetActive(false);
-            isReady = true;
+            if (hasChecked == false)
+            {
+                background.SetActive(true);
+                newRoomButton.SetActive(false);
+                editRoomButton.SetActive(true);
+                resetRoomButton.SetActive(false);
+                isReady = true;
+                hasChecked = true;
+            }
+        }
+        if (isReady == true)
+        {
+            if (hasSpawnedCustomers == false)
+            {
+                StartCoroutine(SpawnCustomers());
+                hasSpawnedCustomers = true;
+            }
         }
         if (hasCustomers == true)
         {
@@ -65,23 +73,16 @@ public class Rooms : MonoBehaviour
             background.SetActive(false);
             newRoomButton.SetActive(false);
             editRoomButton.SetActive(false);
-            resetRoomButton.SetActive(false);
-            hintButton.SetActive(false);
-            if (needsHint == true)
-            {
-                //if the customers need a hint
-                hintButton.SetActive(true);
-                background.SetActive(true);
-            }
+            resetRoomButton.SetActive(false);           
         }
         if (boughtRoom == true && hasCustomers == false && needsResetting == false)
         {
             //room is empty ready for next group so can be edited
+            isReady = true;
             background.SetActive(true);
             newRoomButton.SetActive(false);
             editRoomButton.SetActive(true);
             resetRoomButton.SetActive(false);
-            hintButton.SetActive(false);
         }
         if (needsResetting == true)
         {
@@ -90,7 +91,7 @@ public class Rooms : MonoBehaviour
             newRoomButton.SetActive(false);
             editRoomButton.SetActive(false);
             resetRoomButton.SetActive(true);
-            hintButton.SetActive(false);
+            //hintButton.SetActive(false);
         }
     }
 
@@ -109,8 +110,9 @@ public class Rooms : MonoBehaviour
         SceneManager.LoadSceneAsync(2);
     }
 
-    public void SpawnCustomers()
+    private IEnumerator SpawnCustomers()
     {
+        yield return new WaitForSeconds(5); //cooldown between romm being ready and customers spawning so its not instant
         Debug.Log("Customer Spawned");
         isReady = false;
         hasCustomers = true;
@@ -121,6 +123,7 @@ public class Rooms : MonoBehaviour
     {
         Debug.Log("Customer Left");
         hasCustomers = false;
+        hasSpawnedCustomers = false;
         needsResetting = true;
     }
 
@@ -136,13 +139,5 @@ public class Rooms : MonoBehaviour
         resetRoomButton.SetActive(false);
         background.SetActive(false);
         needsResetting = false;
-    }
-
-    public void GiveHint()
-    {
-        Debug.Log("Gave Hint");
-        hintButton.SetActive(false);
-        background.SetActive(false);
-        needsHint = false;
     }
 }
