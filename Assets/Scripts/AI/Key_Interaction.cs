@@ -8,11 +8,19 @@ public class Key_Interaction : MonoBehaviour
         reactionTime = Random.Range(1, 10); //waits for a random amount of time
         if (other.CompareTag("Customer"))
         {
-            //Debug.Log("Interacting with" + gameObject.name);
-            other.GetComponent<AIMovement>().StopMoving();
-            other.GetComponent<AIMovement>().hasKey = true;
-            gameObject.SetActive(false);
-            other.GetComponent<AIMovement>().Invoke("StartMoving", reactionTime);
+            if (other.GetComponent<AIMovement>().hasKey == true)
+            {
+                return;
+            }
+            else
+            {
+                //Debug.Log("Interacting with" + gameObject.name);
+                other.GetComponent<AIMovement>().StopMoving();
+                other.GetComponent<AIMovement>().hasKey = true;
+                other.GetComponent<Customer>().hasIdea = true; //customer has the idea to use the key after picking it up
+                gameObject.SetActive(false);
+                other.GetComponent<AIMovement>().Invoke("StartMoving", reactionTime);
+            }
         }
     }
 }

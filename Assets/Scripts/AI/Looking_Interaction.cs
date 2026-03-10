@@ -4,8 +4,9 @@ using UnityEngine.AI;
 
 public class Looking_Interaction : MonoBehaviour
 {
-    private int reactionTime;
     public bool alreadyLooked = false;
+    private int reactionTime;
+    private int randomNumber2;
     private int randomNumber;
     public int successRate; //used to make some props less obvious clues (lower number means the customer is less likely to stop and look at it)
 
@@ -14,6 +15,7 @@ public class Looking_Interaction : MonoBehaviour
         //Debug.Log("Interacting with" + gameObject.name);
         reactionTime = Random.Range(1, 10);
         randomNumber = Random.Range(1, 100);
+        randomNumber2 = Random.Range(1, 100);
         if (other.CompareTag("Customer"))
         {
             if (randomNumber < successRate)
@@ -23,6 +25,15 @@ public class Looking_Interaction : MonoBehaviour
                     other.GetComponent<AIMovement>().StopMoving();
                     other.GetComponent<AIMovement>().Invoke("StartMoving", reactionTime);
                     alreadyLooked = true;
+                    if (randomNumber2 < successRate)
+                    {
+                        other.GetComponent<Customer>().hasIdea = true;
+                    }
+                    else
+                    {
+                        other.GetComponent<Customer>().isConfused = true;
+                        other.GetComponent<Customer>().confusedCounter++;
+                    }
                 }
                 else
                 {
