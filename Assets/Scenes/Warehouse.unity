@@ -4014,6 +4014,7 @@ MonoBehaviour:
   cameraButtonText: {fileID: 711405218}
   Manager: 0
   BO: {fileID: 1321000867}
+  topDownCameraBool: 0
   isocamera: {fileID: 1503588035}
   topDcamera: {fileID: 1434225256}
 --- !u!95 &427805262
@@ -13324,7 +13325,10 @@ MonoBehaviour:
   cashText: {fileID: 1013495078}
   timeText: {fileID: 1298345477}
   dayText: {fileID: 189009455}
+  isClosed: 0
   sun: {fileID: 172575428}
+  dayDuration: 120
+  timeOfDay: 0
 --- !u!1001 &1416809392
 PrefabInstance:
   m_ObjectHideFlags: 0

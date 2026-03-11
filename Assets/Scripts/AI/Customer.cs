@@ -11,6 +11,7 @@ public class Customer : MonoBehaviour
     public GameObject confusedIcon;
     public GameObject ideaIcon;
     public GameObject needsHintIcon;
+    public GameObject canvas;
 
     public bool isHappy;
     public bool isAngry;
@@ -20,6 +21,7 @@ public class Customer : MonoBehaviour
 
     public int confusedCounter;
     public int angryCounter;
+
 
     public void Start()
     {
@@ -35,22 +37,16 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
+        
         //makes icons look at which camera is active
-        if(SwitchCamera.instance.topDownCameraBool == true)
+        if (SwitchCamera.instance.topDownCameraBool == true)
         {
-            happyIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
-            angryIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
-            confusedIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
-            ideaIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
-            needsHintIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+            canvas.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
         }
         else
         {
-            happyIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
-            angryIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
-            confusedIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
-            ideaIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
-            needsHintIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            canvas.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            
         }
         if (confusedCounter >= 3) //if the customer gets confused too many times they will get angry
         {

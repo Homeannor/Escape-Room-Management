@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Rooms : MonoBehaviour
 {
     public static Rooms Instance;
+    private int roomCooldown;
+    private int timeInRoom;
     public int roomCost = 500;
     public GameObject roomPrefab;
     private bool hasChecked;
@@ -66,6 +68,8 @@ public class Rooms : MonoBehaviour
                 if (GameManager.instance.isClosed == false)
                 {
                     StartCoroutine(SpawnCustomers());
+                    roomCooldown = Random.Range(3, 10);
+                    timeInRoom = Random.Range(10, 30);
                     hasSpawnedCustomers = true;
                 }
                 else
@@ -120,11 +124,11 @@ public class Rooms : MonoBehaviour
 
     private IEnumerator SpawnCustomers()
     {
-        yield return new WaitForSeconds(5); //cooldown between romm being ready and customers spawning so its not instant
+        yield return new WaitForSeconds(roomCooldown); //cooldown between romm being ready and customers spawning so its not instant
         Debug.Log("Customer Spawned");
         isReady = false;
         hasCustomers = true;
-        Invoke("CustomersLeave", 5);
+        Invoke("CustomersLeave", timeInRoom);
     }
 
     public void CustomersLeave()

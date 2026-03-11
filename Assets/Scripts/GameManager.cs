@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     private float days;
     public bool isClosed;
     public Light sun;
-    private float dayDuration = 60f;
-    private float timeOfDay;
+    public float dayDuration;
+    public float timeOfDay;
 
     private void Start()
     {
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
         string timeOfDayLabel;
 
-        if (hour24 >= 5 && hour24 < 12)
+        if (hour24 >= 6 && hour24 < 12)
         {
             timeOfDayLabel = "MORNING";
             isClosed = false;
