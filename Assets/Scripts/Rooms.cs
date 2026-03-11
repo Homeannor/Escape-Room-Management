@@ -63,8 +63,16 @@ public class Rooms : MonoBehaviour
         {
             if (hasSpawnedCustomers == false)
             {
-                StartCoroutine(SpawnCustomers());
-                hasSpawnedCustomers = true;
+                if (GameManager.instance.isClosed == false)
+                {
+                    StartCoroutine(SpawnCustomers());
+                    hasSpawnedCustomers = true;
+                }
+                else
+                {
+                    //Debug.Log("Customers cannot spawn at night");
+                    return;
+                }
             }
         }
         if (hasCustomers == true)

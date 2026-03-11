@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI dayText;
     private float days;
-
+    public bool isClosed;
     public Light sun;
     private float dayDuration = 60f;
     private float timeOfDay;
@@ -75,13 +75,19 @@ public class GameManager : MonoBehaviour
         string timeOfDayLabel;
 
         if (hour24 >= 5 && hour24 < 12)
+        {
             timeOfDayLabel = "MORNING";
+            isClosed = false;
+        }
         else if (hour24 >= 12 && hour24 < 17)
             timeOfDayLabel = "AFTERNOON";
         else if (hour24 >= 17 && hour24 < 21)
             timeOfDayLabel = "EVENING";
         else
+        {
             timeOfDayLabel = "NIGHT";
+            isClosed = true;
+        }
 
         return string.Format("{0}:{1:00} {2} [{3}]", 
             hour12, minutes, ampm, timeOfDayLabel);
