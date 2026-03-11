@@ -4,6 +4,7 @@ using TMPro;
 
 public class SwitchCamera : MonoBehaviour
 {
+    public static SwitchCamera instance;
     public GameObject isometricCamera;
     public GameObject topDownCamera;
     public GameObject cameraButton;
@@ -11,13 +12,14 @@ public class SwitchCamera : MonoBehaviour
     public int Manager;
     [SerializeField]
     private BuildingOverhaul BO;
-
+    public bool topDownCameraBool = false;
     public Camera isocamera;
     public Camera topDcamera;
         
 
     void Start()
     {
+        instance = this;
         cameraButton.GetComponent<Image>().color = new Color32(255, 204, 211, 255);
         cameraButtonText.text = "TOP DOWN CAMERA";
     }
@@ -32,6 +34,7 @@ public class SwitchCamera : MonoBehaviour
             Cam_TopDown();
             Manager = 1;
             cameraButton.GetComponent<Image>().color = new Color32(255, 204, 211, 255);
+            topDownCameraBool = true;
             cameraButtonText.text = "ISOMETRIC CAMERA";
         }
         else
@@ -39,6 +42,7 @@ public class SwitchCamera : MonoBehaviour
             Cam_Isometeric();
             Manager = 0;
             cameraButton.GetComponent<Image>().color = new Color32(255, 204, 211, 255);
+            topDownCameraBool = false;
             cameraButtonText.text = "TOP DOWN CAMERA";
         }
     } 

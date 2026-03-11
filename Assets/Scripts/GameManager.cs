@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
     public int cash = 0;
     public TextMeshProUGUI cashText;
     public TextMeshProUGUI timeText;
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Instance = this;
+        instance = this;
         
         days = 1f;
         cash = PlayerPrefs.GetInt("Cash", 750);

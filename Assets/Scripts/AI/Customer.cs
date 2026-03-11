@@ -35,6 +35,23 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
+        //makes icons look at which camera is active
+        if(SwitchCamera.instance.topDownCameraBool == true)
+        {
+            happyIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+            angryIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+            confusedIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+            ideaIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+            needsHintIcon.transform.LookAt(SwitchCamera.instance.topDcamera.transform);
+        }
+        else
+        {
+            happyIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            angryIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            confusedIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            ideaIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+            needsHintIcon.transform.LookAt(SwitchCamera.instance.isocamera.transform);
+        }
         if (confusedCounter >= 3) //if the customer gets confused too many times they will get angry
         {
             confusedCounter = 0;
@@ -92,7 +109,7 @@ public class Customer : MonoBehaviour
             confusedIcon.SetActive(false);
             ideaIcon.SetActive(false);
             GetComponent<NavMeshAgent>().speed = 0;   
-            Debug.Log("A customer needs a hint");
+            //Debug.Log("A customer needs a hint");
         }
         else
         {

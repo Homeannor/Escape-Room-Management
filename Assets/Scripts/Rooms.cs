@@ -97,8 +97,8 @@ public class Rooms : MonoBehaviour
 
     public void BuildNewRoom()
     {
-        GameManager.Instance.cash -= roomCost;
-        PlayerPrefs.SetInt("Cash", GameManager.Instance.cash);
+        GameManager.instance.cash -= roomCost;
+        PlayerPrefs.SetInt("Cash", GameManager.instance.cash);
         boughtRoom = true;
         roomPrefab.SetActive(false);
         //Commented out for testing purposes
@@ -122,6 +122,7 @@ public class Rooms : MonoBehaviour
     public void CustomersLeave()
     {
         Debug.Log("Customer Left");
+        GameManager.instance.cash += 100;
         hasCustomers = false;
         hasSpawnedCustomers = false;
         needsResetting = true;
