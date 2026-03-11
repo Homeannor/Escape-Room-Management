@@ -8,11 +8,11 @@ public class AIMovement : MonoBehaviour
     public Vector3 targetLocation;
     private bool hasTargetLocation;
     [SerializeField] float range;
+    public bool hasKey;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //RandomMovement();
     }
 
     private void Update()
@@ -51,11 +51,11 @@ public class AIMovement : MonoBehaviour
 
     public void StopMoving()
     {
-        gameObject.GetComponent<NavMeshAgent>().speed = 0;
+        GetComponent<NavMeshAgent>().speed = 0;
     }
 
     public void StartMoving()
     {
-        gameObject.GetComponent<NavMeshAgent>().speed = 10;
+        GetComponent<NavMeshAgent>().speed = 10;
     }
 }
