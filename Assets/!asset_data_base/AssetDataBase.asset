@@ -216,3 +216,38 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: 6b88c6a5a7b91804f96f0e41da499fff, type: 3}
     <IsFloor>k__BackingField: 0
     <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Bookshelf
+    <ID>k__BackingField: 29
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 387286830002548089, guid: 5af86a7e9dc2a6f4d8d229d2f2e3a9a0, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 5d360008763cfdc4dba77e97cac8c660, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Throne
+    <ID>k__BackingField: 30
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 368529429078855975, guid: cf5a9fb1134ed3a4a829d3952dd1d41d, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: a59c161a7f8406b439ab012d7d385af3, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: desk
+    <ID>k__BackingField: 31
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 281118407124580220, guid: 949e769988e8380418fc7ddad74668db, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 75a8151f7bd99e346acd3914e5b22154, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Money
+    <ID>k__BackingField: 32
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 915686882092299029, guid: f3f94cd6294261c4f80e6b0f1ecc97e3, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 1a98e28b1bcb2084d95f3f7e3f3b34d1, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Vase
+    <ID>k__BackingField: 33
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 2251123389173111278, guid: b514e54f4aaef884db76b4e76be8d18c, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 28c27626e24e5f64cb1ff278009eca8e, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
