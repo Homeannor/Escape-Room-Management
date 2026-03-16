@@ -759,6 +759,9 @@ MonoBehaviour:
   startMoveSpeed: 30
   rotationSpeed: 100
   ScrollSpeed: 20
+  lookSpeedx: 200
+  lookSpeedy: 200
+  orientation: {fileID: 0}
   panelOpen: 0
   topDownCamera: {fileID: 1434225256}
   isometricCamera: {fileID: 1503588035}
@@ -9073,12 +9076,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'WASD - Move Camera
 
-    Q & E - Rotate Camera
+    Hold RIGHT CLICK - Rotate Camera
 
-    SHIFT - 2X Camera Speed
+    SHIFT -
+    2X Camera Speed
 
-    MOUSE
-    WHEEL - Zoom'
+    MOUSE WHEEL - Zoom'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}

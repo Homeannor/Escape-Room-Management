@@ -45,6 +45,9 @@ public class placementsystem : MonoBehaviour
     public Quaternion offset2;
     public Quaternion offset3;
     public Quaternion offset4;
+
+    public Transform placedItemFolder;
+
     private void Start()
     {
         StopPlacement();
@@ -93,7 +96,7 @@ public class placementsystem : MonoBehaviour
             return;
         }
         //play auido here for vaild
-        GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab);
+        GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab, placedItemFolder);
         newObject.transform.position = grid.CellToWorld(gridPostion);
         GameObject rotatePoint = newObject.transform.GetChild(0).gameObject;
         if (Angle == 0 )

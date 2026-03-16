@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
+
 
 public class CameraMovement : MonoBehaviour
 {
@@ -10,10 +10,16 @@ public class CameraMovement : MonoBehaviour
     private float moveSpeed;
     public float rotationSpeed = 50f;
     public float ScrollSpeed;
+    public float lookSpeedx;
+    public float lookSpeedy;
+    public Transform orientation;
+    float xRotation;
+    float yRotation;
     public bool panelOpen;
 
     public Camera topDownCamera;
     public Camera isometricCamera;
+    
 
     private void Start()
     {
@@ -110,10 +116,40 @@ public class CameraMovement : MonoBehaviour
         if (panelOpen == true)
         {
             ScrollSpeed = 0f;
+            lookSpeedx = 0;
+            lookSpeedy = 0;
+
         }
         else
         {
             ScrollSpeed = 20f;
+            lookSpeedx = 400F;
+            lookSpeedy = 400F;
+        }
+
+
+        if (Input.GetMouseButton(1))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeedx;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeedy;
+
+            yRotation += mouseX;
+
+            xRotation -= mouseY; ;
+            xRotation = Mathf.Clamp(xRotation, -25F, 85F);
+
+            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
     }
