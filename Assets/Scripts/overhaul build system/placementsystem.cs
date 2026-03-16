@@ -14,7 +14,7 @@ public class placementsystem : MonoBehaviour
     private Grid grid;
 
     [SerializeField]
-    private AssetDataBase database;
+    public AssetDataBase database;
     private int selectedObjectIndex = -1;
 
     [SerializeField]
@@ -52,6 +52,9 @@ public class placementsystem : MonoBehaviour
     public float startx;
     public float starty;
     public float startz;
+
+    private float HOLDx;
+    private float HOLDy;
 
 
     private void Start()
@@ -113,6 +116,7 @@ public class placementsystem : MonoBehaviour
             {
                 
                 rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz);
+                
 
             }
         }
@@ -122,8 +126,11 @@ public class placementsystem : MonoBehaviour
             if (HasMoved == true)
             {
                
-                rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz +1);
+                rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz + 1f);
+                HOLDx = database.objectsData[selectedObjectIndex].Size.x;
+                HOLDy = database.objectsData[selectedObjectIndex].Size.y;
                 
+
             }
            
         }
@@ -133,8 +140,8 @@ public class placementsystem : MonoBehaviour
             if (HasMoved == true)
             {
                
-                rotatePoint.transform.position = new Vector3(preview.startx + 1, preview.starty, preview.startz);
-
+                rotatePoint.transform.position = new Vector3(preview.startx + 1f, preview.starty, preview.startz);
+                
             }
         }
         else if (Angle == 3)
@@ -144,7 +151,7 @@ public class placementsystem : MonoBehaviour
             {
                
                 rotatePoint.transform.position = new Vector3(preview.startx, preview.starty, preview.startz);
-
+                
             }
         }
 
@@ -152,6 +159,7 @@ public class placementsystem : MonoBehaviour
         PlacedGameObjects.Add(newObject);
         GridData selectedData = database.objectsData[selectedObjectIndex].IsFloor == true ?
            floorData : FloorPropData;
+        Debug.Log(database.objectsData[selectedObjectIndex].Size.x + "---" + database.objectsData[selectedObjectIndex].Size.y);
         selectedData.AddObjectAt(gridPostion, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, PlacedGameObjects.Count - 1);
         preview.UpdatePosition(grid.CellToWorld(gridPostion), false);
     }

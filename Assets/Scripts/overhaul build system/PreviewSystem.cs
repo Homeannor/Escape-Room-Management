@@ -125,7 +125,7 @@ public class PreviewSystem : MonoBehaviour
                 rotatePoint.transform.rotation = PS.offset1;
                 if (PS.HasMoved == true)
                 {
-                    rotatePoint.transform.position = new Vector3(startx, starty, startz );
+                    //rotatePoint.transform.position = new Vector3(startx, starty, startz );
                     PS.HasMoved = false;
 
                 }
@@ -135,7 +135,8 @@ public class PreviewSystem : MonoBehaviour
                 rotatePoint.transform.rotation = PS.offset2;
                 if (PS.HasMoved == true)
                 {
-                    rotatePoint.transform.position = new Vector3(startx, starty, startz + 1f);
+                    
+                   // rotatePoint.transform.position = new Vector3(startx, starty, startz + 1f);
                     PS.HasMoved = false;
 
                 }
@@ -145,7 +146,8 @@ public class PreviewSystem : MonoBehaviour
                 rotatePoint.transform.rotation = PS.offset3;
                 if (PS.HasMoved == true)
                 {
-                    rotatePoint.transform.position = new Vector3(startx + 1f, starty, startz);
+                    
+                    //rotatePoint.transform.position = new Vector3(startx + 1f, starty, startz);
                     PS.HasMoved = false;
 
                 }
@@ -155,7 +157,8 @@ public class PreviewSystem : MonoBehaviour
                 rotatePoint.transform.rotation = PS.offset4;
                 if (PS.HasMoved == true)
                 {
-                    rotatePoint.transform.position = new Vector3(startx, starty, startz );
+                    
+                    //rotatePoint.transform.position = new Vector3(startx, starty, startz );
                     PS.HasMoved = false;
 
                 }

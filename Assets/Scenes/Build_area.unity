@@ -22915,7 +22915,7 @@ MonoBehaviour:
   offset4: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
   HasMoved: 1
   OffTile: 1
-  startx: 2.38
+  startx: 0
   starty: 0
   startz: 0
 --- !u!1001 &916973823
