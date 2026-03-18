@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Rooms : MonoBehaviour
 {
     public static Rooms Instance;
+    public GameObject roomPrefab;
     private int roomCooldown;
     private int timeInRoom;
     public int roomCost = 500;
-    public GameObject roomPrefab;
     private bool hasChecked;
     private bool hasSpawnedCustomers;
 
@@ -26,6 +26,12 @@ public class Rooms : MonoBehaviour
     public GameObject editRoomButton;
     public GameObject resetRoomButton;
     //public GameObject hintButton;
+
+    [Header("Spawn Customers")]
+    public int groupNumber;
+    public GameObject customerPrefab;
+    public GameObject customerSpawnPoint;
+    public Transform customerFolder;
 
     private void Start()
     {
@@ -125,7 +131,11 @@ public class Rooms : MonoBehaviour
     private IEnumerator SpawnCustomers()
     {
         yield return new WaitForSeconds(roomCooldown); //cooldown between romm being ready and customers spawning so its not instant
-        Debug.Log("Customer Spawned");
+        groupNumber = Random.Range(2, 5);
+        for (int i = 0; i < groupNumber; i++)
+        {
+            Instantiate(customerPrefab, customerSpawnPoint.transform.position, transform.rotation, customerFolder);
+        }
         isReady = false;
         hasCustomers = true;
         Invoke("CustomersLeave", timeInRoom);
@@ -133,7 +143,11 @@ public class Rooms : MonoBehaviour
 
     public void CustomersLeave()
     {
-        Debug.Log("Customer Left");
+        //Debug.Log("Customer Left");
+        foreach (Transform customer in customerFolder)
+        {
+            Destroy(customer.gameObject);
+        }
         GameManager.instance.cash += 100;
         hasCustomers = false;
         hasSpawnedCustomers = false;

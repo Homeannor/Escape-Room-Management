@@ -84,20 +84,20 @@ public class CameraMovement : MonoBehaviour
             isometricCamera.transform.Translate(0, 0, -movement, Space.Self);*/
         }
 
-        if (Input.GetKey(KeyCode.E))
+        /*if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.Self);
 
-            /*topDownCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
-            isometricCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);*/
+            topDownCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
+            isometricCamera.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
         }
         else if (Input.GetKey(KeyCode.Q))
         {
             transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.Self);
 
-            /*topDownCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
-            isometricCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);*/
-        }
+            topDownCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
+            isometricCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
+        }*/
 
         isometricCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
         topDownCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
@@ -142,7 +142,7 @@ public class CameraMovement : MonoBehaviour
             xRotation = Mathf.Clamp(xRotation, -25F, 85F);
 
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            //orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
 
         }

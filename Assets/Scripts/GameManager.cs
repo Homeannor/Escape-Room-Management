@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI cashText;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI dayText;
+    public TextMeshProUGUI openClosedText;
     private float days;
     public bool isClosed;
     public Light sun;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         
         days = 1f;
+        timeOfDay = 20f;
         cash = PlayerPrefs.GetInt("Cash", 750);
     }
     void Update()
@@ -33,6 +35,16 @@ public class GameManager : MonoBehaviour
         cashText.text = "CASH: " + cash;
         dayText.text = "DAY " + days;
         timeText.text = FormatTime();
+        if (isClosed == false)
+        {
+            openClosedText.text = "OPEN";
+            openClosedText.color = Color.green;
+        }
+        else
+        {
+            openClosedText.text = "CLOSED";
+            openClosedText.color = Color.red;
+        }
         // Debug.Log(timeText.text);
     }
 
