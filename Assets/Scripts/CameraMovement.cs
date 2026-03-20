@@ -55,35 +55,31 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(movement, 0, 0, Space.Self);
-
-            /*topDownCamera.transform.Translate(movement, 0, 0, Space.World);
-            isometricCamera.transform.Translate(movement, 0, 0, Space.World);*/
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-movement, 0, 0, Space.Self);
-
-            /*topDownCamera.transform.Translate(-movement, 0, 0, Space.Self);
-            isometricCamera.transform.Translate(-movement, 0, 0, Space.Self);*/
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0, 0, movement, Space.Self);
-
-            /*topDownCamera.transform.Translate(0, 0, movement, Space.Self);
-            isometricCamera.transform.Translate(0, 0, movement, Space.Self);*/
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(0, 0, -movement, Space.Self);
-
-            /*topDownCamera.transform.Translate(0, 0, -movement, Space.Self);
-            isometricCamera.transform.Translate(0, 0, -movement, Space.Self);*/
         }
-
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Translate(0, -movement, 0, Space.Self);
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Translate(0, movement, 0, Space.Self);
+        }
+        //Camera Rotation old
         /*if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.Self);
@@ -99,35 +95,7 @@ public class CameraMovement : MonoBehaviour
             isometricCamera.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0, Space.World);
         }*/
 
-        isometricCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
-        topDownCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
-
-        if (isometricCamera.fieldOfView < 30 || topDownCamera.fieldOfView < 30)
-        {
-            topDownCamera.fieldOfView = 30;
-            isometricCamera.fieldOfView = 30;
-        }
-        else if (isometricCamera.fieldOfView > 100 || topDownCamera.fieldOfView > 100)
-        {
-            topDownCamera.fieldOfView = 100;
-            isometricCamera.fieldOfView = 100;
-        }
-
-        if (panelOpen == true)
-        {
-            ScrollSpeed = 0f;
-            lookSpeedx = 0;
-            lookSpeedy = 0;
-
-        }
-        else
-        {
-            ScrollSpeed = 20f;
-            lookSpeedx = 400F;
-            lookSpeedy = 400F;
-        }
-
-
+        //Camera Rotation new
         if (Input.GetMouseButton(1))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -152,6 +120,35 @@ public class CameraMovement : MonoBehaviour
             Cursor.visible = true;
         }
 
+        //Zooming
+        isometricCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
+        topDownCamera.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
+
+        if (isometricCamera.fieldOfView < 30 || topDownCamera.fieldOfView < 30)
+        {
+            topDownCamera.fieldOfView = 30;
+            isometricCamera.fieldOfView = 30;
+        }
+        else if (isometricCamera.fieldOfView > 100 || topDownCamera.fieldOfView > 100)
+        {
+            topDownCamera.fieldOfView = 100;
+            isometricCamera.fieldOfView = 100;
+        }
+
+        //stops cameras moving or zooming if the build panel is open
+        if (panelOpen == true)
+        {
+            ScrollSpeed = 0f;
+            lookSpeedx = 0;
+            lookSpeedy = 0;
+
+        }
+        else
+        {
+            ScrollSpeed = 20f;
+            lookSpeedx = 400F;
+            lookSpeedy = 400F;
+        }
     }
 }
  
