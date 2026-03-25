@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 452454342425772000}
   - component: {fileID: 7790724098080346127}
   - component: {fileID: 3601125465976451416}
+  - component: {fileID: -2294514081516430177}
   m_Layer: 7
   m_Name: Chest
   m_TagString: Untagged
@@ -280,3 +281,16 @@ MonoBehaviour:
   openPrefab: {fileID: 2490706576903393649}
   closedPrefab: {fileID: 4651151738179418024}
   needsKey: 1
+--- !u!114 &-2294514081516430177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447911746370926466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0

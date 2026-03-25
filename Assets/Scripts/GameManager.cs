@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public float dayDuration;
     public float timeOfDay;
 
+    public SavingManager savingManager;
+
     private void Start()
     {
         instance = this;
@@ -23,6 +26,11 @@ public class GameManager : MonoBehaviour
         days = 1f;
         timeOfDay = 20f;
         cash = PlayerPrefs.GetInt("Cash", 750);
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            savingManager.LoadRoom(1);
+        }
     }
     void Update()
     {

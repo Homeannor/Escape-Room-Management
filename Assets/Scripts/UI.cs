@@ -18,17 +18,17 @@ public class UI : MonoBehaviour
     {
         if (PanelCanvas.activeSelf)
         {
-            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(false);
             CameraMovement.instance.panelOpen = false;
-            Debug.Log("PanelCanvas set to false");
+            //Debug.Log("PanelCanvas set to false");
         }
         else
         {
-            Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
+            //Debug.Log($"PanelCanvas Active: {PanelCanvas.activeSelf}");
             PanelCanvas.SetActive(true);
             CameraMovement.instance.panelOpen = true;
-            Debug.Log("PanelCanvas set to true");
+            //Debug.Log("PanelCanvas set to true");
         }
 
         //PanelCanvas.SetActive(true ? false : true);

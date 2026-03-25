@@ -120,7 +120,7 @@ public class Rooms : MonoBehaviour
         boughtRoom = true;
         roomPrefab.SetActive(false);
         //Commented out for testing purposes
-        //Invoke("BuildScene", 1f);
+        Invoke("BuildScene", 1f);
     }
 
     public void BuildScene()

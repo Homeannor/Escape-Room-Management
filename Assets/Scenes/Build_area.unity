@@ -23934,6 +23934,7 @@ MonoBehaviour:
   offset3: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   offset4: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
   placedItemFolder: {fileID: 1015129450}
+  savingManager: {fileID: 1400565929}
 --- !u!1001 &916973823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27924,6 +27925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fb69c8894656947932615330a81b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savingManager: {fileID: 1400565929}
 --- !u!1001 &1084950335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35973,6 +35975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400565928}
   - component: {fileID: 1400565927}
+  - component: {fileID: 1400565929}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -36009,6 +36012,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1400565929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400565926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5089454b38c62d64a892cd20d2c5e2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomContainer: {fileID: 1015129450}
+  database: {fileID: 11400000, guid: e3ca04c2e8449574693c5827d89176cf, type: 2}
 --- !u!4 &1404010707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 35477a388702b7e4390b70a013370567, type: 3}

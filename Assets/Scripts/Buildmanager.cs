@@ -6,7 +6,6 @@ public class Buildmanager : MonoBehaviour
     public static Buildmanager instance;
     public int Angle;
 
-
     private void Awake()
     {
         if (instance != null)

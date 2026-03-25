@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9201065549526175274}
   - component: {fileID: 6087295319545940560}
   - component: {fileID: 4127345021042049632}
+  - component: {fileID: -2882230940203552704}
   m_Layer: 0
   m_Name: jaguar THRONE
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alreadyLooked: 0
   successRate: 79
+--- !u!114 &-2882230940203552704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368529429078855975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1 &6726528670327279690
 GameObject:
   m_ObjectHideFlags: 0

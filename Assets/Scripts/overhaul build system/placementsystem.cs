@@ -47,6 +47,7 @@ public class placementsystem : MonoBehaviour
     public Quaternion offset4;
 
     public Transform placedItemFolder;
+    public SavingManager savingManager;
 
     private void Start()
     {
@@ -57,6 +58,7 @@ public class placementsystem : MonoBehaviour
         WallPropData = new();
         buildOptions.SetActive(false);
         
+        savingManager.LoadRoom(1);
     }
 
     public void StartPlacement(int ID)
@@ -67,6 +69,7 @@ public class placementsystem : MonoBehaviour
         {
            Debug.Log("object with ID " + ID + " not found in database");
         }
+        
         gridVisual.SetActive(true);
         preview.StartingShowingPlacementPreview(database.objectsData[selectedObjectIndex].PreFab, database.objectsData[selectedObjectIndex].Size);
         BO.Onclicked += PlaceStructure;
@@ -97,6 +100,7 @@ public class placementsystem : MonoBehaviour
         }
         //play auido here for vaild
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab, placedItemFolder);
+        newObject.GetComponent<PlaceableItem>().objectIndex = selectedObjectIndex;
         newObject.transform.position = grid.CellToWorld(gridPostion);
         GameObject rotatePoint = newObject.transform.GetChild(0).gameObject;
         if (Angle == 0 )
