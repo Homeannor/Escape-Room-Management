@@ -9312,12 +9312,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WASD - Move Camera
+  m_text: 'WASD & QE - Move Camera
 
-    Hold RIGHT CLICK - Rotate Camera
+    HOLD RIGHT CLICK - Rotate Camera
 
-    SHIFT -
-    2X Camera Speed
+    SHIFT
+    - 2X Camera Speed
 
     MOUSE WHEEL - Zoom'
   m_isRightToLeft: 0
