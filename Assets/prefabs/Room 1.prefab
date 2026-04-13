@@ -460,6 +460,7 @@ MonoBehaviour:
   customerPrefab: {fileID: 1622972958553073292, guid: 90df1f68e6591a1439f49b2d33d15484, type: 3}
   customerSpawnPoint: {fileID: 8036586343995543234}
   customerFolder: {fileID: 0}
+  savingManager: {fileID: 0}
 --- !u!1 &4966279157747687697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1289,7 @@ Transform:
   m_GameObject: {fileID: 8036586343995543234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.413, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

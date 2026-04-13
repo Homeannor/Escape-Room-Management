@@ -22,7 +22,6 @@ public class SavingManager : MonoBehaviour
     public Transform roomContainer;
 
     public AssetDataBase database;
-    private int selectedObjectIndex = -1;
 
     // =========================
     // SAVE
@@ -119,8 +118,7 @@ public class SavingManager : MonoBehaviour
                 continue;
             }
 
-            // selectedObjectIndex = database.objectsData.FindIndex(data => data.ID == ID);
-            GameObject prefab = database.objectsData[selectedObjectIndex].preFab;
+            GameObject prefab = database.objectsData[data.objectIndex].PreFab;
 
             Vector3 pos = new Vector3(data.posX, data.posY, data.posZ);
             Quaternion rot = Quaternion.Euler(data.rotX, data.rotY, data.rotZ);

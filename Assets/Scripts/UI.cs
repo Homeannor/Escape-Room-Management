@@ -12,6 +12,8 @@ public class UI : MonoBehaviour
     public GameObject timeButton;
     public TextMeshProUGUI timeButtonText;
     [SerializeField]
+
+    public Transform placedItemFolder;
     
 
     public void OpenClosePanel()
@@ -66,6 +68,14 @@ public class UI : MonoBehaviour
             directionalLight.transform.rotation = Quaternion.Euler(130f, -10f, 0f);
             timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
             timeButtonText.text = "DAYTIME";
+        }
+    }
+
+    public void clearRoom()
+    {
+        foreach (Transform item in placedItemFolder)
+        {
+            Destroy(item.gameObject);
         }
     }
 

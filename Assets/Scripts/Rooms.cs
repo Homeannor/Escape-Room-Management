@@ -33,6 +33,9 @@ public class Rooms : MonoBehaviour
     public GameObject customerSpawnPoint;
     public Transform customerFolder;
 
+    public SavingManager savingManager;
+    // public Transform roomItemCube;
+
     private void Start()
     {
         Instance = this;
@@ -44,7 +47,17 @@ public class Rooms : MonoBehaviour
         isReady = false;
         hasCustomers = false;
         needsResetting = false;
-}
+
+        savingManager.LoadRoom(1);
+        savingManager.roomContainer.position -= savingManager.roomContainer.position;
+        //savingManager.roomContainer.rotation = Quaternion.Euler(0f, -90f, 0f);
+
+        // roomItemCube.SetParent(transform);
+        // roomItemCube.position = new Vector3(0, -0.41f, 0);
+        // roomItemCube.rotation = Quaternion.Euler(0f, -90f, 0f);
+        // Debug.Log("[START] Moved Loaded Items to correct position");
+    }
+
     void Update()
     {
         if (PlayerPrefs.GetInt("Cash", 750) >= roomCost)
@@ -74,8 +87,8 @@ public class Rooms : MonoBehaviour
                 if (GameManager.instance.isClosed == false)
                 {
                     StartCoroutine(SpawnCustomers());
-                    roomCooldown = Random.Range(3, 10);
-                    timeInRoom = Random.Range(10, 30);
+                    roomCooldown = Random.Range(5, 10);
+                    timeInRoom = Random.Range(20, 30);
                     hasSpawnedCustomers = true;
                 }
                 else
@@ -120,7 +133,7 @@ public class Rooms : MonoBehaviour
         boughtRoom = true;
         roomPrefab.SetActive(false);
         //Commented out for testing purposes
-        Invoke("BuildScene", 1f);
+        //Invoke("BuildScene", 1f);
     }
 
     public void BuildScene()
