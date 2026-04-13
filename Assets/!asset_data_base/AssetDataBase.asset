@@ -251,3 +251,59 @@ MonoBehaviour:
     <itemImage>k__BackingField: {fileID: 21300000, guid: 28c27626e24e5f64cb1ff278009eca8e, type: 3}
     <IsFloor>k__BackingField: 0
     <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Standing_Book
+    <ID>k__BackingField: 34
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: 3a4d59ab46c184f4e91208698b3a8929, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: a48f9432662768d4baed242e8f4e2cef, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Book
+    <ID>k__BackingField: 35
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: 699737d70a6ec4d48af52ae6816d8bb1, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: cb50e31a1ae8c754eb43bbc1984683e6, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Dice
+    <ID>k__BackingField: 36
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: dabb86877b9061f4395aa16be8386598, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 28608d32c4e64f24d80be41d30bd5079, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Jigsaw
+    <ID>k__BackingField: 37
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: 3cb996807b40eab45a131665fed77bee, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 493a6487ecbc060439e82ba78212be08, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Sword
+    <ID>k__BackingField: 38
+    <Size>k__BackingField: {x: 2, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: 124e4c004ec3fb847b51b5f9dd7e71a2, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 272000b4e75223942a1af3f7dd630f7d, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Safe
+    <ID>k__BackingField: 39
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: 866d12831578af14c96ee06393ff2010, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 8e21e65062ac7244e854637c1579a292, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Screw
+    <ID>k__BackingField: 40
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: c2da23e6cc9e65245a2bd43de3eea214, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: f7371f95c717b0e458192145af4a95b5, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
+  - <Name>k__BackingField: Screwdriver
+    <ID>k__BackingField: 41
+    <Size>k__BackingField: {x: 1, y: 1}
+    <PreFab>k__BackingField: {fileID: 939494793293419063, guid: fddb02e934fc70140ad37d2f00336993, type: 3}
+    <itemImage>k__BackingField: {fileID: 21300000, guid: 5886fd99d633fc840adaf784113c2bfc, type: 3}
+    <IsFloor>k__BackingField: 0
+    <IsWall>k__BackingField: 0
