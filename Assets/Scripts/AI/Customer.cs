@@ -22,17 +22,40 @@ public class Customer : MonoBehaviour
     public int confusedCounter;
     public int angryCounter;
 
+    Color[] colors = new Color[]
+    {
+        Color.red,
+        Color.yellow,
+        Color.green,
+        Color.blue,
+        Color.cyan,
+        Color.magenta,
+        Color.black,
+        Color.white,
+    };
 
     public void Start()
     {
         confusedCounter = 0;
         angryCounter = 0;
-        GetComponent<NavMeshAgent>().speed = 10;
+        GetComponent<NavMeshAgent>().speed = 1;
         happyIcon.SetActive(false);
         angryIcon.SetActive(false);
         confusedIcon.SetActive(false);
         ideaIcon.SetActive(false);
         needsHintIcon.SetActive(false);
+        
+        randomCustomerColor();
+    }
+
+    private void randomCustomerColor()
+    {
+        Renderer rend = GetComponent<Renderer>();
+
+        int randomIndex = Random.Range(0, colors.Length);
+        Color chosenColor = colors[randomIndex];
+
+        rend.material.color = chosenColor;
     }
 
     private void Update()
@@ -142,7 +165,7 @@ public class Customer : MonoBehaviour
         Debug.Log("Gave Hint");
         needsHintIcon.SetActive(false);
         needsHint = false;
-        GetComponent<NavMeshAgent>().speed = 10;
+        GetComponent<NavMeshAgent>().speed = 1;
     }
 
 }

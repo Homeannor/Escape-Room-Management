@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5974519975401567760}
   - component: {fileID: -3529819982606651208}
   - component: {fileID: 8210043049053766627}
+  - component: {fileID: 8090634231524008119}
   m_Layer: 7
   m_Name: Selves
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alreadyLooked: 0
   successRate: 25
+--- !u!114 &8090634231524008119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994021676201535376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1 &3719923960770894246
 GameObject:
   m_ObjectHideFlags: 0

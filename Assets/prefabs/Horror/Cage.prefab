@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4356871231648281477}
   - component: {fileID: 3628829271384566920}
   - component: {fileID: 828080259397884215}
+  - component: {fileID: 7071837095944724702}
   m_Layer: 7
   m_Name: Cage
   m_TagString: Untagged
@@ -101,6 +102,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2, z: 3}
   m_Center: {x: 1, y: 1, z: 1}
+--- !u!114 &7071837095944724702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411436969288115799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1001 &3868846080558807414
 PrefabInstance:
   m_ObjectHideFlags: 0

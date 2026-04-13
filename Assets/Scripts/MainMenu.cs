@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public SavingManager savingManager;
+
     public void ManagementScene()
     {
         SceneManager.LoadSceneAsync(1);
+        savingManager.SaveRoom(1);
     }
 
     public void BuildScene()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6940017049739308678}
   - component: {fileID: 1081503116060151745}
   - component: {fileID: 55076101888593367}
+  - component: {fileID: 8209457699166312650}
   m_Layer: 7
   m_Name: Horror_Table
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alreadyLooked: 0
   successRate: 50
+--- !u!114 &8209457699166312650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149790938703417877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1 &8111771313770659811
 GameObject:
   m_ObjectHideFlags: 0

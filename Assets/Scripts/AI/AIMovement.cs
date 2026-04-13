@@ -56,6 +56,13 @@ public class AIMovement : MonoBehaviour
 
     public void StartMoving()
     {
-        GetComponent<NavMeshAgent>().speed = 10;
+        GetComponent<NavMeshAgent>().speed = 1f;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+    
 }

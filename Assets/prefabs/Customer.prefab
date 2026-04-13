@@ -213,8 +213,8 @@ Transform:
   m_GameObject: {fileID: 1622972958553073292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -16.51, y: 2.16, z: 5.84}
-  m_LocalScale: {x: 2.07949, y: 2.07949, z: 2.07949}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6642099, y: 0.6642099, z: 0.6642099}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 169421774681289894}
@@ -307,8 +307,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.96
-  m_Speed: 10
-  m_Acceleration: 8
+  m_Speed: 1
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -326,16 +326,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622972958553073292}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43fa19a79acee88489ffe7a2fa228be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   targetLocation: {x: 0, y: 0, z: 0}
-  range: 20
+  range: 15
   hasKey: 0
 --- !u!54 &4526312928282965706
 Rigidbody:

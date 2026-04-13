@@ -26,7 +26,7 @@ public class EditorButton : MonoBehaviour
         //previewImage.SetActive(false);
         //previewImage.gameObject.SetActive(false);
 
-        Debug.Log("Current Item: " + itemPrefabs.transform.Find(gameObject.name));
+        // Debug.Log("Current Item: " + itemPrefabs.transform.Find(gameObject.name));
     }
 
     public void RoomEditorButton()

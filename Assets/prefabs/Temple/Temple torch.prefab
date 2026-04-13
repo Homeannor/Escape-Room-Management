@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068404523593737691}
+  - component: {fileID: 1715400253495115234}
   m_Layer: 7
   m_Name: Temple torch
   m_TagString: Untagged
@@ -64,6 +65,19 @@ Transform:
   - {fileID: 1736073398655085446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715400253495115234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863437123493481939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b5ac770194646438622f4d632f10fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1 &3593708357042510965
 GameObject:
   m_ObjectHideFlags: 0
