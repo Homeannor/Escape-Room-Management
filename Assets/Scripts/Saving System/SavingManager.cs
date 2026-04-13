@@ -52,9 +52,11 @@ public class SavingManager : MonoBehaviour
             data.posY = item.position.y;
             data.posZ = item.position.z;
 
-            data.rotX = item.eulerAngles.x;
-            data.rotY = item.eulerAngles.y;
-            data.rotZ = item.eulerAngles.z;
+            GameObject rotatePoint = item.transform.GetChild(0).gameObject;
+
+            data.rotX = rotatePoint.transform.eulerAngles.x;
+            data.rotY = rotatePoint.transform.eulerAngles.y;
+            data.rotZ = rotatePoint.transform.eulerAngles.z;
 
             roomData.items.Add(data);
 
@@ -121,9 +123,13 @@ public class SavingManager : MonoBehaviour
             GameObject prefab = database.objectsData[data.objectIndex].PreFab;
 
             Vector3 pos = new Vector3(data.posX, data.posY, data.posZ);
+
+            GameObject rotatePoint = prefab.transform.GetChild(0).gameObject;
+
             Quaternion rot = Quaternion.Euler(data.rotX, data.rotY, data.rotZ);
 
-            GameObject obj = Instantiate(prefab, pos, rot);
+            GameObject obj = Instantiate(prefab, pos, Quaternion.identity);
+            obj.transform.GetChild(0).gameObject.transform.rotation = rot;
             obj.transform.SetParent(roomContainer);
 
             PlaceableItem placeable = obj.GetComponent<PlaceableItem>();

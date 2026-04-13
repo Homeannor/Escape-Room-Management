@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         days = 1f;
         timeOfDay = 20f;
         cash = PlayerPrefs.GetInt("Cash", 750);
+        isClosed = true;
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
