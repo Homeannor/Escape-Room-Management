@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 public class UI : MonoBehaviour
 {
     [SerializeField] private GameObject PanelCanvas;
@@ -14,7 +14,12 @@ public class UI : MonoBehaviour
     [SerializeField]
 
     public Transform placedItemFolder;
-    
+
+    // Undo and Redo
+    public Stack<GameObject> undoStack = new Stack<GameObject>();
+    public Stack<GameObject> redoStack = new Stack<GameObject>();
+    public Button undoButton;
+    public Button redoButton;
 
     public void OpenClosePanel()
     {
@@ -44,6 +49,14 @@ public class UI : MonoBehaviour
         directionalLight.transform.rotation = Quaternion.Euler(130f, -10f, 0f);
         timeButton.GetComponent<Image>().color = new Color32(255, 255, 175, 255);
         timeButtonText.text = "DAYTIME";
+
+        undoStack.Clear();
+        redoStack.Clear();
+    }
+
+    void Update()
+    {
+        UpdateUndoRedoUI();
     }
 
     public void timeToggle()
@@ -71,13 +84,60 @@ public class UI : MonoBehaviour
         }
     }
 
-    public void clearRoom()
+    public void ClearRoom()
     {
         foreach (Transform item in placedItemFolder)
         {
             Destroy(item.gameObject);
         }
+
+        undoStack.Clear();
+        redoStack.Clear();
     }
 
+    public void Undo()
+    {
+        if (undoStack.Count == 0) return;
+
+        GameObject lastItem = undoStack.Pop();
+
+        lastItem.SetActive(false);
+
+        redoStack.Push(lastItem);
+    }
+
+    public void Redo()
+    {
+        if (redoStack.Count == 0) return;
+
+        GameObject item = redoStack.Pop();
+
+        item.SetActive(true);
+
+        undoStack.Push(item);
+    }
+
+    void UpdateUndoRedoUI()
+    {
+        // Undo button
+        if (undoStack.Count == 0)
+        {
+            undoButton.interactable = false;
+        }
+        else
+        {
+            undoButton.interactable = true;
+        }
+
+        // Redo button
+        if (redoStack.Count == 0)
+        {
+            redoButton.interactable = false;
+        }
+        else
+        {
+            redoButton.interactable = true;
+        }
+    }
 }
 

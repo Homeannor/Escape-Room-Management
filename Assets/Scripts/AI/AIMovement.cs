@@ -9,6 +9,7 @@ public class AIMovement : MonoBehaviour
     private bool hasTargetLocation;
     [SerializeField] float range;
     public bool hasKey;
+    public float distance2;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class AIMovement : MonoBehaviour
         {
             agent.SetDestination(targetLocation);
             float distance = Vector3.Distance(transform.position, targetLocation);
-            if (distance < 5f)
+            if (distance < distance2)
             {
                 hasTargetLocation = false;
             }

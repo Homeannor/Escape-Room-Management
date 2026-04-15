@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         
-        days = 1f;
-        timeOfDay = 20f;
+        days = PlayerPrefs.GetFloat("Days", 1f);
+        timeOfDay = PlayerPrefs.GetFloat("TimeOfDay", 20f);
         cash = PlayerPrefs.GetInt("Cash", 750);
         isClosed = true;
 
@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         {
             timeOfDay = 0;
             days++;
+
+            PlayerPrefs.SetFloat("Days", days);
         }
 
         timeOfDay += Time.deltaTime;
@@ -109,6 +111,8 @@ public class GameManager : MonoBehaviour
             timeOfDayLabel = "NIGHT";
             isClosed = true;
         }
+
+        PlayerPrefs.SetFloat("TimeOfDay", timeOfDay);
 
         return string.Format("{0}:{1:00} {2} [{3}]", 
             hour12, minutes, ampm, timeOfDayLabel);

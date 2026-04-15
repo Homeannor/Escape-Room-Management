@@ -36,6 +36,8 @@ public class Rooms : MonoBehaviour
     public SavingManager savingManager;
     // public Transform roomItemCube;
 
+    private Vector3 roomPosition;
+
     private void Start()
     {
         Instance = this;
@@ -57,14 +59,22 @@ public class Rooms : MonoBehaviour
             boughtRoom = false;
         }
 
-        savingManager.LoadRoom(1);
-        savingManager.roomContainer.position += savingManager.roomContainer.position;
-        //savingManager.roomContainer.rotation = Quaternion.Euler(0f, -90f, 0f);
 
-        // roomItemCube.SetParent(transform);
-        // roomItemCube.position = new Vector3(0, -0.41f, 0);
-        // roomItemCube.rotation = Quaternion.Euler(0f, -90f, 0f);
-        // Debug.Log("[START] Moved Loaded Items to correct position");
+        LoadRoomWarehouse();
+        //roomPosition = savingManager.roomContainer.position;
+    }
+
+    public void LoadRoomWarehouse()
+    {
+        savingManager.LoadRoom(1);
+
+        // savingManager.roomContainer.position += savingManager.roomContainer.position;
+        savingManager.roomContainer.position = new Vector3(-118.94f, 1.00f, 46.64f);
+
+        Debug.Log("Room Position: " + savingManager.roomContainer.position);
+        
+        // Debug.Log("Room Position Before: " + savingManager.roomContainer.position);
+        // Debug.Log("Room Position After: " + savingManager.roomContainer.position);
     }
 
     void Update()
@@ -181,12 +191,15 @@ public class Rooms : MonoBehaviour
     {
         //Takes you back to build area
         Invoke("BuildScene", 1f);
-        Debug.Log("Edit");
+        // Debug.Log("Edit");
     }
     
     public void ResetRoom()
     {
-        Debug.Log("Reset");
+        // Debug.Log("Reset");
+        // LoadRoomWarehouse();
+        roomPosition = savingManager.roomContainer.position;
+
         resetRoomButton.SetActive(false);
         background.SetActive(false);
         needsResetting = false;

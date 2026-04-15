@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c835b1c6cc014478b197279b02929e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  successRate: 95
+  successRate: 80
   openPrefab: {fileID: 5820471313935665535}
   closedPrefab: {fileID: 7297496749899047755}
   needsKey: 0

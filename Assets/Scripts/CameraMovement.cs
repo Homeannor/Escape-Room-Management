@@ -24,6 +24,11 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         instance = this;
+
+        Vector3 angles = transform.rotation.eulerAngles;
+
+        yRotation = angles.y;
+        xRotation = angles.x;
     }
     void Update()
     {
@@ -111,9 +116,8 @@ public class CameraMovement : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
             //orientation.rotation = Quaternion.Euler(0, yRotation, 0);
-
-
         }
+
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             Cursor.lockState = CursorLockMode.None;

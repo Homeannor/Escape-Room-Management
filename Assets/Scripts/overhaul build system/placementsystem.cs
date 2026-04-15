@@ -29,7 +29,7 @@ public class placementsystem : MonoBehaviour
     [SerializeField] private Image previewImage;
 
     [SerializeField]
-    private UI RE;
+    public UI RE;
 
     public GameObject buildOptions;
 
@@ -93,16 +93,25 @@ public class placementsystem : MonoBehaviour
         Vector3Int gridPostion = grid.WorldToCell(mousePostion);
 
         bool placementVaild = CheckPlacementVaild(gridPostion, selectedObjectIndex);
-        if(placementVaild == false)
-        {
-            //play auido here for not vaild
-            return;
-        }
+
+        // if(placementVaild == false)
+        // {
+        //     //play auido here for not vaild
+        //     return;
+        // }
+
         //play auido here for vaild
+
         GameObject newObject = Instantiate(database.objectsData[selectedObjectIndex].PreFab, placedItemFolder);
         newObject.GetComponent<PlaceableItem>().objectIndex = selectedObjectIndex;
         newObject.transform.position = grid.CellToWorld(gridPostion);
+
+        // Sorting out undo and redo system
+        RE.undoStack.Push(newObject);
+        RE.redoStack.Clear();
+
         GameObject rotatePoint = newObject.transform.GetChild(0).gameObject;
+
         if (Angle == 0 )
         {
             rotatePoint.transform.rotation *= offset1;

@@ -36,33 +36,36 @@ public class SavingManager : MonoBehaviour
 
         foreach (Transform item in roomContainer)
         {
-            PlaceableItem placeable = item.GetComponent<PlaceableItem>();
-
-            if (placeable == null)
+            if (item.gameObject.activeSelf)
             {
-                Debug.LogWarning($"Skipping object (no PlaceableItem): {item.name}");
-                continue;
+                PlaceableItem placeable = item.GetComponent<PlaceableItem>();
+
+                if (placeable == null)
+                {
+                    Debug.LogWarning($"Skipping object (no PlaceableItem): {item.name}");
+                    continue;
+                }
+
+                ItemData data = new ItemData();
+
+                data.objectIndex = placeable.objectIndex;
+
+                data.posX = item.position.x;
+                data.posY = item.position.y;
+                data.posZ = item.position.z;
+
+                GameObject rotatePoint = item.transform.GetChild(0).gameObject;
+
+                data.rotX = rotatePoint.transform.eulerAngles.x;
+                data.rotY = rotatePoint.transform.eulerAngles.y;
+                data.rotZ = rotatePoint.transform.eulerAngles.z;
+
+                roomData.items.Add(data);
+
+                Debug.Log($"Saved Item #{count}: {item.name} | Index: {data.objectIndex} | Pos: {item.position}");
+
+                count++;
             }
-
-            ItemData data = new ItemData();
-
-            data.objectIndex = placeable.objectIndex;
-
-            data.posX = item.position.x;
-            data.posY = item.position.y;
-            data.posZ = item.position.z;
-
-            GameObject rotatePoint = item.transform.GetChild(0).gameObject;
-
-            data.rotX = rotatePoint.transform.eulerAngles.x;
-            data.rotY = rotatePoint.transform.eulerAngles.y;
-            data.rotZ = rotatePoint.transform.eulerAngles.z;
-
-            roomData.items.Add(data);
-
-            Debug.Log($"Saved Item #{count}: {item.name} | Index: {data.objectIndex} | Pos: {item.position}");
-
-            count++;
         }
 
         string json = JsonUtility.ToJson(roomData, true); // pretty print
