@@ -12,27 +12,28 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI openClosedText;
     private float days;
-    public bool isClosed;
+    public string isClosed;
     public Light sun;
     public float dayDuration;
     public float timeOfDay;
 
     public SavingManager savingManager;
 
-    private void Start()
+    void Start()
     {
         instance = this;
         
         days = PlayerPrefs.GetFloat("Days", 1f);
         timeOfDay = PlayerPrefs.GetFloat("TimeOfDay", 20f);
         cash = PlayerPrefs.GetInt("Cash", 750);
-        isClosed = true;
+        isClosed = PlayerPrefs.GetString("IsClosed", "True");
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             savingManager.LoadRoom(1);
         }
     }
+
     void Update()
     {
         updateUI();
@@ -44,7 +45,8 @@ public class GameManager : MonoBehaviour
         cashText.text = "CASH: " + cash;
         dayText.text = "DAY " + days;
         timeText.text = FormatTime();
-        if (isClosed == false)
+
+        if (isClosed == "False")
         {
             openClosedText.text = "OPEN";
             openClosedText.color = Color.green;
@@ -54,10 +56,8 @@ public class GameManager : MonoBehaviour
             openClosedText.text = "CLOSED";
             openClosedText.color = Color.red;
         }
-        // Debug.Log(timeText.text);
     }
 
-    //Temporary method to add cash for testing
     public void AddCash()
     {
         cash += 100;
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
         if (hour24 >= 6 && hour24 < 12)
         {
             timeOfDayLabel = "MORNING";
-            isClosed = false;
+            isClosed = "False";
         }
         else if (hour24 >= 12 && hour24 < 17)
             timeOfDayLabel = "AFTERNOON";
@@ -109,9 +109,10 @@ public class GameManager : MonoBehaviour
         else
         {
             timeOfDayLabel = "NIGHT";
-            isClosed = true;
+            isClosed = "True";
         }
 
+        PlayerPrefs.SetString("IsClosed", isClosed);
         PlayerPrefs.SetFloat("TimeOfDay", timeOfDay);
 
         return string.Format("{0}:{1:00} {2} [{3}]", 

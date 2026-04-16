@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("TimeOfDay", 20f);
         PlayerPrefs.SetInt("Cash", 750);
         PlayerPrefs.SetString("Room1", "False");
+        PlayerPrefs.SetString("IsClosed", "True");
 
         savingManager.SaveRoom(1);
         SceneManager.LoadSceneAsync(1);

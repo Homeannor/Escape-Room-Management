@@ -103,7 +103,7 @@ public class Rooms : MonoBehaviour
         {
             if (hasSpawnedCustomers == false)
             {
-                if (GameManager.instance.isClosed == false)
+                if (GameManager.instance.isClosed == "False")
                 {
                     StartCoroutine(SpawnCustomers());
                     roomCooldown = Random.Range(5, 10);
@@ -164,7 +164,7 @@ public class Rooms : MonoBehaviour
     private IEnumerator SpawnCustomers()
     {
         yield return new WaitForSeconds(roomCooldown); //cooldown between romm being ready and customers spawning so its not instant
-        groupNumber = Random.Range(2, 5);
+        groupNumber = Random.Range(3, 10);
         for (int i = 0; i < groupNumber; i++)
         {
             Instantiate(customerPrefab, customerSpawnPoint.transform.position, transform.rotation, customerFolder);
