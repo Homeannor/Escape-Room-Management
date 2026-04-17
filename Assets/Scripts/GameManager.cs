@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     void updateUI()
     {
-        cashText.text = "CASH: " + cash;
+        cashText.text = "CASH: £" + cash;
         dayText.text = "DAY " + days;
         timeText.text = FormatTime();
 
