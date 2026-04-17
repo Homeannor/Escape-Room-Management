@@ -1,4 +1,4 @@
-using UnityEditor;
+// using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        EditorApplication.ExitPlaymode();
+        // EditorApplication.ExitPlaymode();
     }
 
     public void BuildScene()
